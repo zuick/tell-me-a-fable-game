@@ -1,22 +1,23 @@
 var items = [
     {
-        id: "knight",
+        id: "0",
         name: "Рыцарь",
+        initial: true, // загружается в первичный пул игрока
         male: true
     },
     {
-        id: "dragon",
+        id: "1",
         name: "Дракон",
         male: true
     },
     {
-        id: "sword",
+        id: "2",
         name: "Меч",
         male: true
     },
     {
-        id: "castle",
-        name: "Замок",
+        id: "3",
+        name: "Сундук",
         male: true
     }
 ];

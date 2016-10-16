@@ -1,14 +1,15 @@
 var actions = [
     {
-        id: "pulledOut",
-        title: "выхватил"
+        id: "0",
+        title: "вытащил",
+        initial: true, // загружается в первичный пул игрока
     },
     {
-        id: "broke",
+        id: "1",
         title: "сломал"
     },
     {
-        id: "eat",
+        id: "2",
         title: "съел"
     }
 ];

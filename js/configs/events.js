@@ -1,47 +1,38 @@
 var events = [
     {
         id: "0",
-        title: "",
-        description: "История номер 1 или пример события",
-        initial: true, // загружаеться в первичный пул
-        outcomes: [
+        description: "Герои спустились в подземелье и первым, что они увидели был сундук невероятных размеров.",
+        initial: true, // загружается в первичный пул игрока
+        outcomes: [ // исходы события (может сработать несколько)
             {
-                type: "newSubject",
-                subjectId: "subjectId",
-                condition: {
-                    subjectIds: [],
-                    objectIds: [],
-                    actionIds: []
+                type: "newSubject", // игрок получит нового персонажа
+                subjectId: "subjectId", // идентификатор персонажа
+                condition: { // условие при котором сработает этот исход
+                    subjectIds: [], // идентификаторы допустимых субъектов
+                    objectIds: [], // идентификаторы допустимых объектов
+                    actionIds: [] // идентификаторы допустимых действий
                 }
             },
             {
-                type: "nextEvent",
-                eventId: "eventId",
-                condition: {
+                type: "nextEvent", // игроку представят конкретное событие 
+                eventId: "eventId", // идентификатор события
+                condition: { 
                     subjectId: [],
                     objectId: [],
                     actionId: []
                 }
             }
-        ]
+        ],
+        objects: ["3"] // доступные объекты
     },
     {
         id: "1",
-        title: "",
         description: "История номер 2",
         initial: true,
-        outcomes: []
+        outcomes: [] // исходы пустые, значит следущее событие будет случайным
     },
     {
         id: "2",
-        title: "",
-        description: "История номер 3",
-        initial: true,
-        outcomes: []
-    },
-    {
-        id: "2",
-        title: "",
         description: "Особый случай",
         outcomes: []
     }
