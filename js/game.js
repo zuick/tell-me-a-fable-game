@@ -1,5 +1,5 @@
-(function(){
-    document.addEventListener("DOMContentLoaded", function(){
-        document.getElementById("content").textContent = "hello from js";
-    });
-})();
+var Game = function(){
+    this.init = function(){
+        document.getElementById("content").textContent = "init from game";
+    }
+}
