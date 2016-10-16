@@ -4,14 +4,20 @@
         <title>Tell me a fable</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/actions.js"></script>
-        <script src="js/items.js"></script>
-        <script src="js/events.js"></script>
-        <script src="js/player.js"></script>
-        <script src="js/game.js"></script>
-        <script src="js/app.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.16.4/lodash.min.js"></script>
+        <script type="text/javascript"src="js/configs/actions.js"></script>
+        <script type="text/javascript" src="js/configs/items.js"></script>
+        <script type="text/javascript" src="js/configs/events.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </head>
     <body>
-        <div id="content"></div>
+        <div id="page">
+            <div id="story"></div>  
+            <form id="playerAction">
+                <button type="submit" name="submit">OK</button>
+            </form>
+        </div>
     </body>
 </html>
