@@ -16,12 +16,16 @@ var Player = function( initialSquad, initialActions, initialEvents ){
         this.events = _.clone(initialEvents);
     }
     
-    this.pullEventById = function( eventId ){
-        var event = _.find( this.events, function( e ){ return e.id === eventId; } );
+    this.pullById = function( array, id ){
+        var event = _.find( array, function( e ){ return e.id === id; } );
         if( !_.isUndefined( event )){
-            _.remove( this.events, function( e ){ return e.id === eventId; } );
+            _.remove( array, function( e ){ return e.id === id; } );
         }
         return event;
     }
+    
+    this.pullEventById = this.pullById.bind(this, this.events);
+    this.pullActionById = this.pullById.bind(this, this.actions);
+    
 }
 

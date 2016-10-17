@@ -1,0 +1,25 @@
+body {
+    height: 100%;
+    background: #ecddc6;
+    color: #614315;
+}
+
+.page {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.btn { 
+    padding: 4px;
+    min-width: 70px; 
+}
+.hidden { display: none; }
+
+.selectors { display: inline-block; }
+
+.selectors .select { 
+    padding: 4px; 
+    margin-right: 5px; 
+}
+
+.reaction-form .btn.submit { display: inline-block; }
