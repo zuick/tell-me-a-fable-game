@@ -51,6 +51,18 @@ var items = [
         initial: true,
         male: true
     },   
+    {
+        id: 10,
+        name: "Мистер Прищепко",
+        initial: true,
+        male: true
+    },
+    {
+        id: 11,
+        name: "Девушка-орнитолог",
+        initial: true,
+        male: false
+    },
 ];
 
 

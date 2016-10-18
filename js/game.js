@@ -90,13 +90,20 @@ var Game = function(){
         this.addRow( this.currentEvent.description );
     }
     
+    this.getRandomItems = function( array, count ){
+        return _.shuffle( array ).slice( 0, count );
+    }
+    
     this.startStory = function(){
         this.content.textContent = "";
         this.nextEventId = void 0;
         this.lastTurn = void 0;
         
         this.player = new Player(
-            this.items.filter( function( i ){ return i.initial; } ),
+            this.getRandomItems( 
+                this.items.filter( function( i ){ return i.initial; } ), 
+                globalSettings.playerInitialSubjectsMax 
+            ),
             this.actions.filter( function( i ){ return i.initial; } ),
             this.events.filter( function( i ){ return i.initial; } )
         );
