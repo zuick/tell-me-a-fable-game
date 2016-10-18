@@ -27,5 +27,13 @@ var Player = function( initialSquad, initialActions, initialEvents ){
     this.pullEventById = this.pullById.bind(this, this.events);
     this.pullActionById = this.pullById.bind(this, this.actions);
     
+    this.addHero = function( item ){
+        if( _.isUndefined( item ) ) return;
+        this.squad.push( item );
+    }
+    
+    this.removeHeroById = function( itemId ){
+        _.remove(this.squad, function( item ){ return item.id === itemId });
+    }
 }
 

@@ -20,14 +20,20 @@ var Game = function(){
     }
     
     this.nextEvent = function(){
-        if( this.player.events.length == 0 ) return false;
-        
-        var index = ( this.player.events.length > 1 )
-            ? _.random( 0, this.player.events.length - 1 )
-            : 0;
-            
-        this.loadEvent( this.player.events[ index ].id );
-        return true;
+        if( !_.isUndefined( this.nextEventId ) ){
+            this.currentEvent = this.getById( this.events, this.nextEventId );
+            this.nextEventId = void 0;
+            return true;
+        }else{
+            if( this.player.events.length == 0 ) return false;
+
+            var index = ( this.player.events.length > 1 )
+                ? _.random( 0, this.player.events.length - 1 )
+                : 0;
+
+            this.loadEvent( this.player.events[ index ].id );
+            return true;
+        }
     }
     
     this.addRow = function( content ){
@@ -56,7 +62,9 @@ var Game = function(){
         this.selectors.appendChild( 
             utils.createSelect( 
                 "object", 
-                this.currentEvent.objects.map( this.getItemById ).map( this.getOptionSetting )
+                this.currentEvent.objects
+                    .map( this.getById.bind( this, this.items ) )
+                    .map( this.getOptionSetting )
             )
         );
     }
@@ -74,8 +82,8 @@ var Game = function(){
         return { id: item.id, caption: item.name.toLowerCase() };
     }
     
-    this.getItemById = function( id ){ 
-        return _.find( this.items, function( item ){ return item.id === id } );
+    this.getById = function( array, id ){ 
+        return _.find( array, function( item ){ return item.id === id } );
     }
 
     this.showCurrentEvent = function(){
@@ -84,6 +92,8 @@ var Game = function(){
     
     this.startStory = function(){
         this.content.textContent = "";
+        this.nextEventId = void 0;
+        this.lastTurn = void 0;
         
         this.player = new Player(
             this.items.filter( function( i ){ return i.initial; } ),
@@ -118,11 +128,47 @@ var Game = function(){
         }
     }
     
+    this.checkEventOutcomeCondition = function( turn, outcome ){
+        var subjectPassed =  
+            _.isUndefined( outcome.condition.subjectIds ) || 
+            _.indexOf( outcome.condition.subjectIds, turn.subjectId ) !== -1;
+    
+        var actionPassed =  
+            _.isUndefined( outcome.condition.actionIds ) || 
+            _.indexOf( outcome.condition.actionIds, turn.actionId ) !== -1;
+    
+        var objectPassed =  
+            _.isUndefined( outcome.condition.objectIds ) || 
+            _.indexOf( outcome.condition.objectIds, turn.objectId ) !== -1;
+            
+        return subjectPassed && actionPassed && objectPassed;
+    }
+    
+    this.applyOutcome = function( outcome ){
+        switch( outcome.type ){
+            case "newSubject":
+                this.player.addHero( this.getById( this.items, outcome.subjectId ) );
+                break;
+            case "removeSubject":
+                this.player.removeHeroById( outcome.subjectId );
+                break;
+            case "nextEvent":
+                this.nextEventId = outcome.eventId;
+                break;
+            default: break;
+        }
+    }
+    
     this.onPlayerSubmit = function( e ){
         e.preventDefault();
         
-        var turn = this.getPlayerTurn();
-        this.player.pullActionById( turn.actionId );
+        this.lastTurn = this.getPlayerTurn();
+        
+        this.currentEvent.outcomes
+            .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
+            .forEach( this.applyOutcome.bind( this ) );
+        
+        this.player.pullActionById( this.lastTurn.actionId );
         this.addRow( this.getSelectorsContent() );
         this.popEvent();
     }
