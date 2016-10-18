@@ -171,9 +171,11 @@ var Game = function(){
         
         this.lastTurn = this.getPlayerTurn();
         
-        this.currentEvent.outcomes
-            .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
-            .forEach( this.applyOutcome.bind( this ) );
+        if( !_.isUndefined( this.currentEvent.outcomes ) ){
+            this.currentEvent.outcomes
+                .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
+                .forEach( this.applyOutcome.bind( this ) );            
+        }
         
         this.player.pullActionById( this.lastTurn.actionId );
         this.addRow( this.getSelectorsContent() );
@@ -182,8 +184,12 @@ var Game = function(){
     
     this.popEvent = function(){
         if( this.nextEvent() ){
-            this.updateSelectors();
             this.showCurrentEvent();
+            if( _.isUndefined( this.currentEvent.objects ) ){
+                this.popEvent();
+            }else{
+                this.updateSelectors();
+            }
         } else {
             this.endStory();
         }

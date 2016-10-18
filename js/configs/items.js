@@ -63,6 +63,11 @@ var items = [
         initial: true,
         male: false
     },
+        {
+        id: 12,
+        name: "Силовая броня",
+        male: false
+    },
 ];
 
 

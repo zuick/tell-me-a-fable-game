@@ -26,9 +26,18 @@ var events = [
     },
     {
         id: 1,
-        description: "Путники пробирались через дремучий лес. Незаметно наступил вечер и пришлось остановиться на ночлег. С вершины дуба за ними наблюдал филин",
+        description: "Путники пробирались через дремучий лес. Незаметно наступил вечер и пришлось остановиться на ночлег. С вершины дуба за ними наблюдал филин.",
         initial: true,
-        outcomes: [], // нет исхода типа nextEvent, значит следущее событие будет случайным
+        outcomes: [
+            {
+                type: "nextEvent",
+                eventId: 4,
+                condition: {
+                    actionIds: [4,6,1,2],
+                    objectIds: [5]
+                }
+            }
+        ],
         objects: [5, 6]
     },
     {
@@ -37,11 +46,19 @@ var events = [
         initial: true,
         outcomes: [
             {
-                type: "nextEvent", // игроку представят конкретное событие 
-                eventId: 3, // идентификатор события
+                type: "nextEvent",
+                eventId: 3,
                 condition: {
                     actionIds: [1,4],
-                    objectIds: [8],
+                    objectIds: [7,8]
+                }
+            },
+            {
+                type: "nextEvent",
+                eventId: 5,
+                condition: {
+                    actionIds: [4,6],
+                    objectIds: [8]
                 }
             }
         ],
@@ -50,9 +67,26 @@ var events = [
     {
         id: 3,
         description: "Гном не на шутку разозлился и упрыгал на одной ноге в свою хижину. Вылез он оттуда уже в силовой броне.",
-        outcomes: [],
-        objects: [7]
+        outcomes: [
+            {
+                type: "nextEvent",
+                eventId: 4,
+                condition: {
+                    actionIds: [4,6,1],
+                    objectIds: [12]
+                }
+            }
+        ],
+        objects: [12]
     },
+    {
+        id: 4,
+        description: "Бабахнул взрыв, с неба посылпались какие-то лохмотья. Придя в себя герои двинулись дальше."
+    },
+    {
+        id: 5,
+        description: "Гном засмеялся и дал героям золото."
+    }
 ];
 
 
