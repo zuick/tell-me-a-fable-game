@@ -107,7 +107,7 @@ var Game = function(){
     }
     
     this.getSelectorValue = function( name ){
-        return Number.parseInt( utils.getSelectedOption( utils.getChildWithName( this.selectors, name ) ).value )
+        return parseInt( utils.getSelectedOption( utils.getChildWithName( this.selectors, name ) ).value )
     }
     
     this.getPlayerTurn = function(){
