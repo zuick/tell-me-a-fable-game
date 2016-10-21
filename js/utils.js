@@ -1,5 +1,5 @@
-var utils = {
-    createSelect: function( name, options ){
+var Utils = function(){
+    this.createSelect = function( name, options ){
         var select = document.createElement("select");
         select.setAttribute("name", name);
         select.setAttribute("class", "select");
@@ -13,42 +13,55 @@ var utils = {
             })
         }
         return select;
-    },
+    }
     
-    createParagraph: function( content ){
+    this.createParagraph = function( content ){
         var row = document.createElement("p");
         row.innerHTML = content;
         row.setAttribute("class", "paragraph");
         return row;
-    },
+    }
     
-    getChildWithName: function( element, name ){
+    this.getChildWithName = function( element, name ){
         for( var i = 0; i < element.childNodes.length; i++) {
             if( element.childNodes[i].getAttribute("name") === name ){
                 return element.childNodes[i];
             }
         }
         return void 0;
-    },
+    }
     
-    getSelectedOption: function( select ){
+    this.getSelectedOption = function( select ){
         return select.options[select.selectedIndex];
-    },
+    }
     
-    validateOutcome: function( outcome ){
-        return outcome;
-    },
+    this.loadJSON = function( path ){
+        return new Promise( function( success, reject ){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', path, true);
+            xhr.send();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState != 4) return;
+
+                if (xhr.status != 200) {
+                    console.log("Incorrect json path: ", path);
+                } else {
+                    try {
+                        if( !_.isUndefined(success) ) success( JSON.parse( xhr.responseText ) );
+                    } catch( e ){
+                        console.log("Can't parse json: ", e);
+                        reject(e);
+                    }
+                }
+                
+            }            
+        })
+    }
     
-    validateEvent: function( event ){
-        return event;
-    },
-    
-    validateItem: function( item ){
-        return item;
-    },
-    
-    validateAction: function( action ){
-        return action;
+    this.loadResources = function( resources ){
+        var promises = resources.map( this.loadJSON );
+        return Promise.all( promises );
     }
 }
 

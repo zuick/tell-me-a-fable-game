@@ -1,0 +1,52 @@
+[
+    {
+        "type": "newSubject",
+        "subjectId": 4,
+        "condition": {
+            "actionIds": [3,5,6],
+            "objectIds": [4]
+        }
+    },
+    {
+        "type": "removeSubject",
+        "subjectId": 0,
+        "condition": { 
+            "subjectIds": [0],
+            "actionIds": [4],
+            "objectIds": [4]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 4,
+        "condition": {
+            "actionIds": [4,6,1,2],
+            "objectIds": [5]
+        }
+    },    
+    {
+        "type": "nextEvent",
+        "eventId": 3,
+        "condition": {
+            "actionIds": [1,4],
+            "objectIds": [7,8]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 5,
+        "condition": {
+            "actionIds": [5,6],
+            "objectIds": [8]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 4,
+        "condition": {
+            "actionIds": [4,6,1],
+            "objectIds": [12]
+        }
+    }
+]
+

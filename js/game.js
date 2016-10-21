@@ -1,19 +1,30 @@
 var Game = function(){
+    this.resources = [
+        "configs/settings.json",
+        "configs/events.json",
+        "configs/items.json",
+        "configs/actions.json",        
+        "configs/outcomes.json"
+    ];
+    
     this.init = function(){
         this.content = document.getElementById("story");
         this.playerAction = document.getElementById("playerAction");
         this.selectors = document.getElementById("selectors");
         this.restartBtn = document.getElementById("restartBtn");
         
-        this.events = events.map(utils.validateEvent);
-        this.items = items.map(utils.validateItem);
-        this.actions = actions.map(utils.validateAction);
-        this.outcomes = outcomes.map(utils.validateOutcome);
-        
-        this.playerAction.addEventListener("submit", this.onPlayerSubmit.bind(this));
-        this.restartBtn.addEventListener("click", this.onRestart.bind(this));
-        
-        this.startStory();
+        utils.loadResources( this.resources ).then(function( jsons ){
+            this.settings = jsons[0];
+            this.events = jsons[1];
+            this.items = jsons[2];
+            this.actions = jsons[3];
+            this.outcomes = jsons[4];
+
+            this.playerAction.addEventListener("submit", this.onPlayerSubmit.bind(this));
+            this.restartBtn.addEventListener("click", this.onRestart.bind(this));
+
+            this.startStory();            
+        }.bind(this));
     }
     
     this.loadEvent = function( eventId ){
@@ -107,7 +118,7 @@ var Game = function(){
         this.player = new Player(
             this.getRandomItems( 
                 this.items.filter( function( i ){ return i.initial; } ), 
-                globalSettings.playerInitialSubjectsMax 
+                this.settings.playerInitialSubjectsMax 
             ),
             this.actions.filter( function( i ){ return i.initial; } ),
             this.events.filter( function( i ){ return i.initial; } )

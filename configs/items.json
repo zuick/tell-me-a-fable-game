@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "name": "Рыцарь",
+        "initial": true,
+        "male": true
+    },
+    {
+        "id": 1,
+        "name": "Дракон",
+        "male": true
+    },
+    {
+        "id": 2,
+        "name": "Меч",
+        "male": true
+    },
+    {
+        "id": 3,
+        "name": "Сундук",
+        "male": true
+    },
+    {
+        "id": 4,
+        "name": "Троль",
+        "male": true
+    },
+    {
+        "id": 5,
+        "name": "Филин",
+        "male": true
+    },
+    {
+        "id": 6,
+        "name": "Дуб",
+        "male": true
+    },
+    {
+        "id": 7,
+        "name": "Гном",
+        "male": true
+    },
+    {
+        "id": 8,
+        "name": "Гномья нога",
+        "male": true
+    },
+    {
+        "id": 9,
+        "name": "Криворукий маг",
+        "initial": true,
+        "male": true
+    },   
+    {
+        "id": 10,
+        "name": "Мистер Прищепко",
+        "initial": true,
+        "male": true
+    },
+    {
+        "id": 11,
+        "name": "Девушка-орнитолог",
+        "initial": true,
+        "male": false
+    },
+        {
+        "id": 12,
+        "name": "Силовая броня",
+        "male": false
+    }
+]
+
+
