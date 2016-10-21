@@ -196,7 +196,7 @@ var Game = function(){
             .forEach( this.applyOutcome.bind( this ) );            
                 
         this.player.pullActionById( this.lastTurn.actionId );
-        this.addRow( this.getSelectorsContent() );
+        this.addRow( "<b>" + this.getSelectorsContent() + "</b>");
         this.popEvent();
     }
     
