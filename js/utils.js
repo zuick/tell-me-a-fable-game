@@ -17,7 +17,7 @@ var utils = {
     
     createParagraph: function( content ){
         var row = document.createElement("p");
-        row.textContent = content;
+        row.innerHTML = content;
         row.setAttribute("class", "paragraph");
         return row;
     },

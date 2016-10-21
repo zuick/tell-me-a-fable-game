@@ -88,7 +88,7 @@ var Game = function(){
     }
 
     this.showCurrentEvent = function(){
-        this.addRow( this.currentEvent.description );
+        this.addRow( this.replaceVariables( this.currentEvent.description ) );
     }
     
     this.getRandomItems = function( array, count ){
@@ -98,7 +98,11 @@ var Game = function(){
     this.startStory = function(){
         this.content.textContent = "";
         this.nextEventId = void 0;
-        this.lastTurn = void 0;
+        this.lastTurn = {
+            subjectId: "",
+            actionId: "",
+            objectId: ""
+        }
         
         this.player = new Player(
             this.getRandomItems( 
@@ -165,6 +169,21 @@ var Game = function(){
                 break;
             default: break;
         }
+    }
+    
+    this.replaceVariables = function( text ){
+        var lastSubject = this.getById(this.items, this.lastTurn.subjectId );
+        var lastAction = this.getById(this.actions, this.lastTurn.actionId );
+        var lastObject = this.getById(this.items, this.lastTurn.objectId );
+        var randomItem = this.items[_.random( 0, this.items.length - 1)];
+        var randomPlayerSubject = this.player.squad[_.random( 0, this.player.squad - 1)];
+        
+        if( !_.isUndefined( lastSubject ) ) text = text.replace(/%lastSubject%/g, lastSubject.name);
+        if( !_.isUndefined( lastAction ) ) text = text.replace(/%lastAction%/g, lastAction.name);
+        if( !_.isUndefined( lastObject ) ) text = text.replace(/%lastObject%/g, lastObject.name);
+        text = text.replace(/%randomItem%/g, randomItem.name);
+        text = text.replace(/%randomPlayerSubject%/g, randomPlayerSubject.name);
+        return text;
     }
     
     this.onPlayerSubmit = function( e ){

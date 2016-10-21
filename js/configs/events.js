@@ -29,6 +29,11 @@ var events = [
     {
         id: 5,
         description: "Гном засмеялся и дал героям золото."
+    },
+    {
+        id: 6,
+        initial: true,
+        description: "Совершенно внезапно герои наткнулись на тест переменных.<br/> Прошлый герой, действие и объект: %lastSubject%, %lastAction%, %lastObject%.<br/> Случайная сущность: %randomItem%, случайный герой из отряда игрока: %randomPlayerSubject%"
     }
 ];
 
