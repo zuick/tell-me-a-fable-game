@@ -8,6 +8,7 @@ var Game = function(){
         this.events = events.map(utils.validateEvent);
         this.items = items.map(utils.validateItem);
         this.actions = actions.map(utils.validateAction);
+        this.outcomes = outcomes.map(utils.validateOutcome);
         
         this.playerAction.addEventListener("submit", this.onPlayerSubmit.bind(this));
         this.restartBtn.addEventListener("click", this.onRestart.bind(this));
@@ -170,13 +171,11 @@ var Game = function(){
         e.preventDefault();
         
         this.lastTurn = this.getPlayerTurn();
-        
-        if( !_.isUndefined( this.currentEvent.outcomes ) ){
-            this.currentEvent.outcomes
-                .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
-                .forEach( this.applyOutcome.bind( this ) );            
-        }
-        
+                
+        this.outcomes
+            .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
+            .forEach( this.applyOutcome.bind( this ) );            
+                
         this.player.pullActionById( this.lastTurn.actionId );
         this.addRow( this.getSelectorsContent() );
         this.popEvent();

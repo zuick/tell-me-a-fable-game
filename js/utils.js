@@ -35,6 +35,10 @@ var utils = {
         return select.options[select.selectedIndex];
     },
     
+    validateOutcome: function( outcome ){
+        return outcome;
+    },
+    
     validateEvent: function( event ){
         return event;
     },
