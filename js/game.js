@@ -31,25 +31,38 @@ var Game = function(){
         this.currentEvent = this.player.pullEventById( eventId );
     }
     
-    this.nextEvent = function(){
+    this.nextEvent = function( firstPop ){
         if( !_.isUndefined( this.nextEventId ) ){
             this.currentEvent = this.getById( this.events, this.nextEventId );
             this.nextEventId = void 0;
             return true;
         }else{
-            if( this.player.events.length == 0 ) return false;
+            // if first event, filter for dependency free events
+            var events = ( firstPop )            
+                ? this.player.events.filter( 
+                        function( e ){ 
+                            return !/%last/g.test(e.description);
+                        }
+                    )
+                : this.player.events;
+                
+            if( events.length == 0 ) return false;
 
-            var index = ( this.player.events.length > 1 )
-                ? _.random( 0, this.player.events.length - 1 )
+            var index = ( events.length > 1 )
+                ? _.random( 0, events.length - 1 )
                 : 0;
 
-            this.loadEvent( this.player.events[ index ].id );
+            this.loadEvent( events[ index ].id );
             return true;
         }
     }
     
     this.addRow = function( content ){
         this.content.appendChild( utils.createParagraph( content ) );
+    }
+    
+    this.addHeading = function( content ){
+        this.content.appendChild( utils.createHeading( content ) );
     }
     
     this.updateSelectors = function(){
@@ -123,8 +136,9 @@ var Game = function(){
             this.actions.filter( function( i ){ return i.initial; } ),
             this.events.filter( function( i ){ return i.initial; } )
         );
-
-        this.popEvent();
+        
+        this.addHeading( this.getHeading() );
+        this.popEvent( true );
     }
     
     this.endStory = function(){
@@ -194,6 +208,7 @@ var Game = function(){
         if( !_.isUndefined( lastObject ) ) text = text.replace(/%lastObject%/g, lastObject.name);
         text = text.replace(/%randomItem%/g, randomItem.name);
         text = text.replace(/%randomPlayerSubject%/g, randomPlayerSubject.name);
+        text = text.replace(/%playerSubjects%/g, this.player.getSquadString());
         return text;
     }
     
@@ -211,8 +226,14 @@ var Game = function(){
         this.popEvent();
     }
     
-    this.popEvent = function(){
-        if( this.nextEvent() ){
+    this.getHeading = function(){
+        var headings = this.events.filter( function( e ){ return e.heading; } );
+        if( _.isUndefined( headings ) ) return "";
+        return this.replaceVariables( headings[ _.random( 0, headings.length - 1 ) ].description );
+    }
+    
+    this.popEvent = function( firstPop ){
+        if( this.nextEvent( firstPop ) ){
             this.showCurrentEvent();
             if( _.isUndefined( this.currentEvent.objects ) ){
                 this.popEvent();

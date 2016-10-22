@@ -16,6 +16,15 @@ var Player = function( initialSquad, initialActions, initialEvents ){
         this.events = _.clone(initialEvents);
     }
     
+    this.getSquadString = function(){
+        if( this.squad.length == 0 ) return "";
+        
+        return ( this.squad.slice( 0, this.squad.length - 1 )
+                .map( function( h ){ return h.name; } )
+                .join(", ") ) + " и " + this.squad[ this.squad.length - 1 ].name;
+                
+    }
+    
     this.pullById = function( array, id ){
         var event = _.find( array, function( e ){ return e.id === id; } );
         if( !_.isUndefined( event )){

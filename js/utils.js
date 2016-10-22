@@ -22,6 +22,12 @@ var Utils = function(){
         return row;
     }
     
+    this.createHeading = function( content ){
+        var row = document.createElement("h1");
+        row.innerHTML = content;
+        return row;
+    }
+    
     this.getChildWithName = function( element, name ){
         for( var i = 0; i < element.childNodes.length; i++) {
             if( element.childNodes[i].getAttribute("name") === name ){
