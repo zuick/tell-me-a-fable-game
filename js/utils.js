@@ -1,15 +1,26 @@
 var Utils = function(){
     this.createSelect = function( name, options ){
-        var select = document.createElement("select");
+        var select = document.createElement("div");        
+        select.setAttribute("class", "radio-select");
         select.setAttribute("name", name);
-        select.setAttribute("class", "select");
         
         if( !_.isUndefined(options) ){
-            options.forEach( function( item ){
-                var option = document.createElement("option");
+            options.forEach( function( item, index ){
+                var id = name + item.id;
+                
+                var option = document.createElement("input");
+                if( index === 0 ) option.setAttribute("checked", "checked");
                 option.setAttribute("value", item.id);
-                option.textContent = item.caption;
+                option.setAttribute("class", "radio-option");
+                option.setAttribute("id", id);
+                option.setAttribute("name", name);
+                option.setAttribute("type", "radio");
                 select.appendChild(option);
+                
+                var label = document.createElement("label");
+                label.setAttribute("for", id);                
+                label.textContent = item.caption;
+                select.appendChild(label);                
             })
         }
         return select;
@@ -24,6 +35,7 @@ var Utils = function(){
     
     this.createHeading = function( content ){
         var row = document.createElement("h1");
+        row.setAttribute("class", "heading");
         row.innerHTML = content;
         return row;
     }
@@ -38,7 +50,12 @@ var Utils = function(){
     }
     
     this.getSelectedOption = function( select ){
-        return select.options[select.selectedIndex];
+        for( var i = 0; i < select.childNodes.length; i++) {
+            if( select.childNodes[i].checked ){
+                return select.childNodes[i];
+            }
+        }
+        return {};
     }
     
     this.loadJSON = function( path ){

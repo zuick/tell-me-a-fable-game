@@ -94,12 +94,12 @@ var Game = function(){
         );
     }
     
-    this.getSelectorsContent = function(){
+    this.getTurnString = function( turn ){
         var result = "";
-        for( var i = 0; i < this.selectors.childNodes.length; i++) {
-            var select = this.selectors.childNodes[i];
-            result += utils.getSelectedOption( select ).textContent + " ";
-        }
+        result += this.getById( this.items, turn.subjectId ).name + " ";
+        result += this.getById( this.actions, turn.actionId ).name + " ";
+        result += this.getById( this.items, turn.objectId ).name;
+        
         return result.charAt(0).toUpperCase() + result.slice(1);
     }
     
@@ -222,7 +222,7 @@ var Game = function(){
             .forEach( this.applyOutcome.bind( this ) );            
                 
         this.player.pullActionById( this.lastTurn.actionId );
-        this.addRow( "<b>" + this.getSelectorsContent() + "</b>");
+        this.addRow( "<b>" + this.getTurnString( this.lastTurn ) + "</b>");
         this.popEvent();
     }
     
