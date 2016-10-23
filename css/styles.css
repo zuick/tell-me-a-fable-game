@@ -18,14 +18,14 @@ body {
     padding: 4px;
     min-width: 70px; 
     cursor: pointer;
+    min-height: 30px;
 }
+
 .hidden { display: none; }
 
-.selectors { display: inline-block; }
-
-.selectors .select { 
-    padding: 4px; 
-    margin-right: 5px; 
+.radio-selectors { 
+    display: inline-block; 
+    float: left;
 }
 
 .radio-selectors {
@@ -37,22 +37,31 @@ body {
     text-align: center;
 }
 
+.radio-submit.inline {
+    float: left;
+}
+
 .radio-submit .btn {
-    min-width: 208px;  
+    min-width: 156px;  
     color: #735a33;
     border: 1px solid #735a33;
     background: #f7ebcb;
+    margin: 0 0 0 4px;
 }
 
 .radio-submit .btn:hover {
     background: white;
 }
 
+.radio-selectors {
+    width: 480px;
+}
+
 .radio-selectors .radio-select {
     width: 33.3%;
     float: left;
     box-sizing: border-box;   
-    padding: 2px;
+    padding: 0 2px 2px 2px;
 }
 
 .radio-selectors .radio-select:first-child {
@@ -86,3 +95,12 @@ body {
 }
 
 .reaction-form .btn.submit { display: inline-block; }
+
+@media screen and ( max-width: 480px ){
+    .radio-selectors {
+        width: 100%;
+    }
+    .radio-submit.inline {
+        float: none;
+    }
+}
