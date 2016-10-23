@@ -49,6 +49,16 @@
         "id": 9,
         "initial": true,
         "description": "%randomPlayerSubject% и %randomItem%. %lastAction%, %lastObject%."
+    },
+    {
+        "id": 10,
+        "ending": true,
+        "description": "После всех этих невероятных приключений герои вернулись к себе домой ( кроме %randomPlayerSubject%, он потерялся по пути ) и стали пить чай с плюшками."
+    },
+        {
+        "id": 11,
+        "ending": true,
+        "description": "В таверне, которая называлась '%randomItem%' %randomPlayerSubject% заставил всех играть с ним в какую-то дурацкую текстовую игру. Стало так скучно, что %playerSubjects% решили, что пора заканчивать приключение."
     }
 ]
 

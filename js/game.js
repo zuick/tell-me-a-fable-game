@@ -152,12 +152,12 @@ var Game = function(){
             this.events.filter( function( i ){ return i.initial; } )
         );
         
-        this.addHeading( this.getHeading() );
+        this.addHeading( this.getSpecialEvents("heading") );
         this.popEvent( true );
     }
     
     this.endStory = function(){
-        this.addRow( "Вот и сказочки конец." );
+        this.addRow( this.getSpecialEvents("ending" ) );
         this.playerAction.classList.toggle("hidden");
         this.restartBtn.classList.toggle("hidden");
     }
@@ -241,8 +241,8 @@ var Game = function(){
         this.popEvent();
     }
     
-    this.getHeading = function(){
-        var headings = this.events.filter( function( e ){ return e.heading; } );
+    this.getSpecialEvents = function( category ){
+        var headings = this.events.filter( function( e ){ return e[category]; } );
         if( _.isUndefined( headings ) ) return "";
         return this.replaceVariables( headings[ _.random( 0, headings.length - 1 ) ].description );
     }
