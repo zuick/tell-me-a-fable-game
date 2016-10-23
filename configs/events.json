@@ -44,6 +44,11 @@
         "id": 8,
         "heading": true,
         "description": "%randomPlayerSubject% и %randomItem%"
+    },
+    {
+        "id": 9,
+        "initial": true,
+        "description": "%randomPlayerSubject% и %randomItem%. %lastAction%, %lastObject%."
     }
 ]
 

@@ -86,5 +86,16 @@ var Utils = function(){
         var promises = resources.map( this.loadJSON );
         return Promise.all( promises );
     }
+    
+    this.capitalize = function( string ){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }        
+    
+    this.capitalizeParagraph = function( string ){
+        return string
+            .split(".")
+            .map( function( s ){ return this.capitalize(s.trim()) }.bind(this) )
+            .join(". ");
+    }
 }
 

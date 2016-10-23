@@ -73,14 +73,23 @@ var Game = function(){
         this.selectors.appendChild( 
             utils.createSelect( 
                 "subject", 
-                this.player.squad.map( this.getOptionSetting )
+                this.player.squad
+                    .map( this.getOptionSetting )
+                    .map( function( option ){
+                        return { id: option.id, caption: utils.capitalize( option.caption )}; 
+                    })
             )
         );
     
         this.selectors.appendChild( 
             utils.createSelect( 
                 "action", 
-                this.player.actions.map( this.getOptionSetting )
+                this.player.actions
+                    .map( this.getOptionSetting )
+                    .map( function( option ){
+                        return { id: option.id, caption: option.caption.toLowerCase() }; 
+                    })
+                        
             )
         );
 
@@ -100,11 +109,11 @@ var Game = function(){
         result += this.getById( this.actions, turn.actionId ).name + " ";
         result += this.getById( this.items, turn.objectId ).name;
         
-        return result.charAt(0).toUpperCase() + result.slice(1);
+        return utils.capitalize( result );
     }
     
     this.getOptionSetting = function( item ){
-        return { id: item.id, caption: item.name.toLowerCase() };
+        return { id: item.id, caption: item.name };
     }
     
     this.getById = function( array, id ){ 
@@ -112,7 +121,13 @@ var Game = function(){
     }
 
     this.showCurrentEvent = function(){
-        this.addRow( this.replaceVariables( this.currentEvent.description ) );
+        this.addRow( 
+            utils.capitalizeParagraph( 
+                this.replaceVariables( 
+                    this.currentEvent.description 
+                )
+            ) 
+        );
     }
     
     this.getRandomItems = function( array, count ){
