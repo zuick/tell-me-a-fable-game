@@ -84,7 +84,7 @@ var Game = function(){
         this.selectors.appendChild( 
             utils.createSelect( 
                 "action", 
-                this.player.actions
+                this.getRandomItems( this.player.actions, this.settings.playerActionsMax )
                     .map( this.getOptionSetting )
                     .map( function( option ){
                         return { id: option.id, caption: option.caption.toLowerCase() }; 
@@ -235,8 +235,7 @@ var Game = function(){
         this.outcomes
             .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
             .forEach( this.applyOutcome.bind( this ) );            
-                
-        this.player.pullActionById( this.lastTurn.actionId );
+                        
         this.addRow( "<b>" + this.getTurnString( this.lastTurn ) + "</b>");
         this.popEvent();
     }

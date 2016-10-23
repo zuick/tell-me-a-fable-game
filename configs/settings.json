@@ -1,5 +1,6 @@
 {
-    "playerInitialSubjectsMax": 3
+    "playerInitialSubjectsMax": 3,
+    "playerActionsMax": 5
 }
 
 
