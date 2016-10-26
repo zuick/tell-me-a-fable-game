@@ -1,8 +1,9 @@
 body {
     height: 100%;
-    background: #ecddc6;
+    background: #d6bfa2;
     color: #735a33;
     font-family: sans-serif;
+    margin: 20px;
 }
 
 .heading {
@@ -12,6 +13,9 @@ body {
 .page {
     max-width: 640px;
     margin: 0 auto;
+    padding: 20px 40px;
+    background: #ecddc6;
+    overflow: auto;
 }
 
 .btn { 

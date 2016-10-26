@@ -28,12 +28,15 @@ var Game = function(){
     }
     
     this.loadEvent = function( eventId ){
-        this.currentEvent = this.player.pullEventById( eventId );
-        if( !_.isUndefined( this.currentEvent.nextEventId ) ) this.nextEventId = this.currentEvent.nextEventId;
+        this.currentEvent = this.player.pullEventById( eventId );        
     }
     
     this.nextEvent = function( firstPop ){
-        if( !_.isUndefined( this.nextEventId ) ){
+        if( !_.isUndefined( this.currentEvent ) && !_.isUndefined( this.currentEvent.nextEventId ) ){
+            this.currentEvent = this.getById( this.events, this.currentEvent.nextEventId );
+            this.nextEventId = void 0;
+            return true;
+        } else if( !_.isUndefined( this.nextEventId ) ){
             this.currentEvent = this.getById( this.events, this.nextEventId );
             this.nextEventId = void 0;
             return true;
