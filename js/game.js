@@ -69,6 +69,9 @@ var Game = function(){
         while (this.selectors.firstChild) {
             this.selectors.removeChild(this.selectors.firstChild);
         }
+        var actionsScope = this.settings.randomizeActions.enable
+            ? this.getRandomItems( this.player.actions, this.settings.randomizeActions.limit )
+            : this.player.actions;
         
         this.selectors.appendChild( 
             utils.createSelect( 
@@ -80,11 +83,10 @@ var Game = function(){
                     })
             )
         );
-    
         this.selectors.appendChild( 
             utils.createSelect( 
                 "action", 
-                this.getRandomItems( this.player.actions, this.settings.playerActionsMax )
+                actionsScope
                     .map( this.getOptionSetting )
                     .map( function( option ){
                         return { id: option.id, caption: option.caption.toLowerCase() }; 
