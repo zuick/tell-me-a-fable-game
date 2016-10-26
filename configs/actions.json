@@ -1,37 +1,17 @@
 [
     {
         "id": 0,
-        "name": "вытащил",
-        "initial": true
-    },
-    {
-        "id": 1,
-        "name": "сломал",
-        "initial": true
-    },
-    {
-        "id": 2,
         "name": "съел",
         "initial": true
     },
     {
-        "id": 3,
-        "name": "поговорил с",
-        "initial": true
-    },
-    {
-        "id": 4,
+        "id": 1,
         "name": "ударил",
         "initial": true
     },
     {
-        "id": 5,
-        "name": "Поцеловал",
-        "initial": true
-    },
-    {
-        "id": 6,
-        "name": "пощекотал",
+        "id": 2,
+        "name": "поцеловал",
         "initial": true
     }
 ]

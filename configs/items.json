@@ -1,72 +1,49 @@
 [
     {
-        "id": 0,
-        "name": "Рыцарь",
-        "initial": true,
-        "male": true
-    },
-    {
         "id": 1,
-        "name": "Дракон",
-        "male": true
-    },
+        "name": "Криворукий маг",
+        "initial": true
+    },   
     {
         "id": 2,
-        "name": "Меч",
-        "male": true
+        "name": "Белостихотворец",
+        "initial": true
     },
     {
         "id": 3,
-        "name": "Сундук",
-        "male": true
+        "name": "Безрогий единорог",
+        "initial": true
     },
     {
         "id": 4,
-        "name": "Троль",
-        "male": true
+        "name": "Безымянный дух",
+        "initial": true
     },
     {
         "id": 5,
-        "name": "Филин",
-        "male": true
+        "name": "Кузнец-молодец",
+        "initial": true
     },
     {
         "id": 6,
-        "name": "Дуб",
-        "male": true
+        "name": "Вампир-добряк",
+        "initial": true
     },
     {
         "id": 7,
-        "name": "Гном",
-        "male": true
+        "name": "сундук"
     },
     {
         "id": 8,
-        "name": "Гномья нога",
-        "male": true
+        "name": "лягушку"
     },
     {
         "id": 9,
-        "name": "Криворукий маг",
-        "initial": true,
-        "male": true
-    },   
+        "name": "стрелу"
+    },
     {
         "id": 10,
-        "name": "Мистер Прищепко",
-        "initial": true,
-        "male": true
-    },
-    {
-        "id": 11,
-        "name": "Девушка-орнитолог",
-        "initial": true,
-        "male": false
-    },
-        {
-        "id": 12,
-        "name": "Силовая броня",
-        "male": false
+        "name": "Человек-сундук"
     }
 ]
 

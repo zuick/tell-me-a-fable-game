@@ -1,51 +1,96 @@
 [
     {
         "type": "newSubject",
-        "subjectId": 4,
+        "subjectId": 10,
         "condition": {
-            "actionIds": [3,5,6],
-            "objectIds": [4]
+            "actionIds": [2],
+            "objectIds": [7]
         }
     },
     {
-        "type": "removeSubject",
-        "subjectId": 0,
-        "condition": { 
-            "subjectIds": [0],
-            "actionIds": [4],
-            "objectIds": [4]
+        "type": "removeLastSubject",        
+        "condition": {            
+            "actionIds": [0],
+            "objectIds": [8]
+        }
+    },
+    {
+        "type": "removeLastSubject",        
+        "condition": {            
+            "actionIds": [0],
+            "objectIds": [7]
         }
     },
     {
         "type": "nextEvent",
         "eventId": 4,
         "condition": {
-            "actionIds": [4,6,1,2],
-            "objectIds": [5]
-        }
-    },    
-    {
-        "type": "nextEvent",
-        "eventId": 3,
-        "condition": {
-            "actionIds": [1,4],
-            "objectIds": [7,8]
+            "actionIds": [2],
+            "objectIds": [7]
         }
     },
     {
         "type": "nextEvent",
-        "eventId": 5,
+        "eventId": 8,
         "condition": {
-            "actionIds": [5,6],
+            "actionIds": [2],
             "objectIds": [8]
         }
     },
     {
         "type": "nextEvent",
-        "eventId": 4,
+        "eventId": 3,
         "condition": {
-            "actionIds": [4,6,1],
-            "objectIds": [12]
+            "actionIds": [2],
+            "objectIds": [9]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 7,
+        "condition": {
+            "actionIds": [0],
+            "objectIds": [7]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 2,
+        "condition": {
+            "actionIds": [0],
+            "objectIds": [8]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 3,
+        "condition": {
+            "actionIds": [0],
+            "objectIds": [9]
+        }
+    },
+        {
+        "type": "nextEvent",
+        "eventId": 5,
+        "condition": {
+            "actionIds": [1],
+            "objectIds": [7]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 6,
+        "condition": {
+            "actionIds": [1],
+            "objectIds": [8]
+        }
+    },
+    {
+        "type": "nextEvent",
+        "eventId": 9,
+        "condition": {
+            "actionIds": [1],
+            "objectIds": [9]
         }
     }
 ]

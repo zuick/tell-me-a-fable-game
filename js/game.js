@@ -29,6 +29,7 @@ var Game = function(){
     
     this.loadEvent = function( eventId ){
         this.currentEvent = this.player.pullEventById( eventId );
+        if( !_.isUndefined( this.currentEvent.nextEventId ) ) this.nextEventId = this.currentEvent.nextEventId;
     }
     
     this.nextEvent = function( firstPop ){
@@ -159,7 +160,11 @@ var Game = function(){
     }
     
     this.endStory = function(){
-        this.addRow( this.getSpecialEvents("ending" ) );
+        if( this.player.squad.length > 0 ){
+            this.addRow( this.getSpecialEvents("ending" ) );
+        }else{
+            this.addRow( this.getSpecialEvents("noSubjects" ) );
+        }
         this.playerAction.classList.toggle("hidden");
         this.restartBtn.classList.toggle("hidden");
     }
@@ -203,6 +208,8 @@ var Game = function(){
             case "newSubject":
                 this.player.addHero( this.getById( this.items, outcome.subjectId ) );
                 break;
+            case "removeLastSubject": 
+                this.player.removeHeroById( this.lastTurn.subjectId );
             case "removeSubject":
                 this.player.removeHeroById( outcome.subjectId );
                 break;
@@ -223,8 +230,8 @@ var Game = function(){
         if( !_.isUndefined( lastSubject ) ) text = text.replace(/%lastSubject%/g, lastSubject.name);
         if( !_.isUndefined( lastAction ) ) text = text.replace(/%lastAction%/g, lastAction.name);
         if( !_.isUndefined( lastObject ) ) text = text.replace(/%lastObject%/g, lastObject.name);
-        text = text.replace(/%randomItem%/g, randomItem.name);
-        text = text.replace(/%randomPlayerSubject%/g, randomPlayerSubject.name);
+        if( !_.isUndefined( randomItem ) ) text = text.replace(/%randomItem%/g, randomItem.name);
+        if( !_.isUndefined( randomPlayerSubject ) ) text = text.replace(/%randomPlayerSubject%/g, randomPlayerSubject.name);
         text = text.replace(/%playerSubjects%/g, this.player.getSquadString());
         return text;
     }
@@ -249,7 +256,7 @@ var Game = function(){
     }
     
     this.popEvent = function( firstPop ){
-        if( this.nextEvent( firstPop ) ){
+        if( this.nextEvent( firstPop ) && this.player.squad.length > 0 ){
             this.showCurrentEvent();
             if( _.isUndefined( this.currentEvent.objects ) ){
                 this.popEvent();
