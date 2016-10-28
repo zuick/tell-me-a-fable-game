@@ -124,11 +124,18 @@ table tr:nth-child(even){
     background: rgba(255, 255, 255, 0.3);
 }
 
-@media screen and ( max-width: 480px ){
+@media screen and ( max-width: 640px ){
     .radio-selectors {
         width: 100%;
+        word-break: break-word;
     }
     .radio-submit.inline {
         float: none;
+    }
+    body{
+        margin: 0;
+    }
+    .page {
+        padding: 0 10px 20px 10px;
     }
 }
