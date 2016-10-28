@@ -46,8 +46,7 @@ var Game = function(){
         
         this.loadResources( function(){
             var page = document.getElementById("page");
-            page.remove();
-            page = document.createElement("div");
+            utils.clearElement(page);
             page.setAttribute("class", "debug-page");
             
             var outcomesTable = utils.createTable();
