@@ -40,6 +40,30 @@ var Utils = function(){
         return row;
     }
     
+    this.clearElement = function( element ){
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    }
+    
+    this.createTable = function(){
+        var table = document.createElement("table");
+        var tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+        return table;
+    }
+    
+    this.createTableRow = function(){
+        var row = document.createElement("tr");
+        for( var i = 0; i < arguments.length; i++ ){
+            var column = document.createElement("td");
+            column.textContent = arguments[i];
+            row.appendChild(column);            
+        }
+
+        return row;
+    }
+    
     this.getChildWithName = function( element, name ){
         for( var i = 0; i < element.childNodes.length; i++) {
             if( element.childNodes[i].getAttribute("name") === name ){

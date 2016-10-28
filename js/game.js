@@ -7,23 +7,134 @@ var Game = function(){
         "configs/outcomes.json"
     ];
     
-    this.init = function(){
-        this.content = document.getElementById("story");
-        this.playerAction = document.getElementById("playerAction");
-        this.selectors = document.getElementById("selectors");
-        this.restartBtn = document.getElementById("restartBtn");
-        
+    this.loadResources = function( onComplete ){
         utils.loadResources( this.resources ).then(function( jsons ){
             this.settings = jsons[0];
             this.events = jsons[1];
             this.items = jsons[2];
             this.actions = jsons[3];
             this.outcomes = jsons[4];
+            
+            if( typeof( onComplete ) === "function" ) onComplete();            
+        }.bind(this));
+    }
+    
+    this.init = function(){        
+        this.content = document.getElementById("story");
+        this.playerAction = document.getElementById("playerAction");
+        this.selectors = document.getElementById("selectors");
+        this.restartBtn = document.getElementById("restartBtn");
+        
+        this.playerAction.addEventListener("submit", this.onPlayerSubmit.bind(this));
+        this.restartBtn.addEventListener("click", this.onRestart.bind(this));
+        
+        this.loadResources( this.startStory.bind(this) );
+    }
+    
+    
+    this.debug = function(){
+        var getConditionStr = function( outcomes, array, category ){
+            if( !_.isUndefined( outcomes.condition[category] ) ){
+                var a = this.getByIds( array, outcomes.condition[category] );
+                
+                return this.getByIds( array, outcomes.condition[category] )
+                    .map( function( i ){ return i.name } )
+                    .join(", ")
+            }
+            return false;
+        }.bind(this)
+        
+        this.loadResources( function(){
+            var page = document.getElementById("page");
+            page.remove();
+            page = document.createElement("div");
+            page.setAttribute("class", "debug-page");
+            
+            var outcomesTable = utils.createTable();
+            var headingsTable = utils.createTable();
+            var initialsTable = utils.createTable();
+            var noSubjectsTable = utils.createTable();
+            var endingsTable = utils.createTable();
 
-            this.playerAction.addEventListener("submit", this.onPlayerSubmit.bind(this));
-            this.restartBtn.addEventListener("click", this.onRestart.bind(this));
-
-            this.startStory();            
+            this.events
+                .filter( function( e ){ return e.heading; } )
+                .forEach( function( e ){
+                    headingsTable.tBodies[0].appendChild( 
+                        utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+                
+            this.events
+                .filter( function( e ){ return e.initial; } )
+                .forEach( function( e ){
+                    initialsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+                
+            this.events
+                .filter( function( e ){ return e.ending; } )
+                .forEach( function( e ){
+                    endingsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+                
+            this.events
+                .filter( function( e ){ return e.noSubjects; } )
+                .forEach( function( e ){
+                    noSubjectsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+            
+            this.outcomes.forEach( function( outcome ){
+                var conditions = [];
+                
+                var subject = getConditionStr(outcome, this.items, "subjectIds");
+                var action = getConditionStr(outcome, this.actions, "actionIds");
+                var object = getConditionStr(outcome, this.items, "objectIds");
+                
+                if( subject ) conditions.push( subject );
+                if( action ) conditions.push( action );
+                if( object ) conditions.push( object );
+                
+                var result = "";
+                switch( outcome.type ){
+                    case "newSubject":
+                        result = "new subject: " + this.getById( this.items, outcome.subjectId ).name;
+                        break;
+                    case "removeLastSubject": 
+                        result = "remove last subject"
+                        break;
+                    case "removeSubject":
+                        result = "remove subject: " + this.getById( this.items, outcome.subjectId ).name;
+                        break;
+                    case "nextEvent":
+                        result = this.getById( this.events, outcome.eventId ).description.slice(0,1000);
+                        break;
+                    default: break;
+                }
+                
+                
+                outcomesTable.tBodies[0].appendChild( 
+                    utils.createTableRow( conditions.join(" - "), result )
+                );
+                
+            }.bind(this));
+            
+            page.appendChild( utils.createHeading( "Headings" ) );
+            page.appendChild( headingsTable );
+            page.appendChild( utils.createHeading( "Endings" ) );
+            page.appendChild( endingsTable );
+            page.appendChild( utils.createHeading( "No subjects" ) );
+            page.appendChild( noSubjectsTable );
+            page.appendChild( utils.createHeading( "Initial events" ) );
+            page.appendChild( initialsTable );
+            page.appendChild( utils.createHeading( "Outcomes" ) );
+            page.appendChild( outcomesTable );
+            
+            document.body.appendChild(page);
         }.bind(this));
     }
     
@@ -69,10 +180,9 @@ var Game = function(){
         this.content.appendChild( utils.createHeading( content ) );
     }
     
-    this.updateSelectors = function(){
-        while (this.selectors.firstChild) {
-            this.selectors.removeChild(this.selectors.firstChild);
-        }
+    this.updateSelectors = function(){        
+        utils.clearElement(this.selectors);
+        
         var actionsScope = this.settings.randomizeActions.enable
             ? this.getRandomItems( this.player.actions, this.settings.randomizeActions.limit )
             : this.player.actions;
@@ -124,6 +234,10 @@ var Game = function(){
     
     this.getById = function( array, id ){ 
         return _.find( array, function( item ){ return item.id === id } );
+    }
+    
+    this.getByIds = function( array, ids ){
+        return ids.map( function( id ){ return this.getById( array, id ) }.bind(this) );
     }
 
     this.showCurrentEvent = function(){
@@ -213,6 +327,7 @@ var Game = function(){
                 break;
             case "removeLastSubject": 
                 this.player.removeHeroById( this.lastTurn.subjectId );
+                break;
             case "removeSubject":
                 this.player.removeHeroById( outcome.subjectId );
                 break;

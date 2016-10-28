@@ -100,6 +100,30 @@ body {
 
 .reaction-form .btn.submit { display: inline-block; }
 
+.debug-page {
+    margin: 0 auto;
+    max-width: 920px;
+}
+
+table {
+    margin: 20px;
+    background: #e4d6c1;
+    width: 100%;
+}
+
+table td{    
+    padding: 8px;
+}
+
+table td:first-child{
+    width: 200px;
+}
+
+
+table tr:nth-child(even){
+    background: rgba(255, 255, 255, 0.3);
+}
+
 @media screen and ( max-width: 480px ){
     .radio-selectors {
         width: 100%;
