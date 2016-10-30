@@ -382,15 +382,15 @@ var Game = function(){
                 return !_.isUndefined( o.condition.subjectIds ) && !_.isUndefined( o.condition.actionIds ) && !_.isUndefined( o.condition.objectIds )
             })
             
-        var concreteActionObject = passedOutcomes
-            .filter( function( o ){ 
-                return !_.isUndefined( o.condition.actionIds ) && !_.isUndefined( o.condition.objectIds )
-            });
-
         var concreteSubjectObject = passedOutcomes
             .filter( function( o ){ 
                 return !_.isUndefined( o.condition.subjectIds ) && !_.isUndefined( o.condition.objectIds )
             })
+            
+        var concreteActionObject = passedOutcomes
+            .filter( function( o ){ 
+                return !_.isUndefined( o.condition.actionIds ) && !_.isUndefined( o.condition.objectIds )
+            });
         
         // apply by priority
         if( concreteSubjectActionObject.length > 0 ){
@@ -398,7 +398,7 @@ var Game = function(){
         }else if( concreteSubjectObject.length > 0 ){
             concreteSubjectObject.forEach( this.applyOutcome.bind( this ) );
         }else{
-            concreteSubjectObject.forEach( this.applyOutcome.bind( this ) );
+            concreteActionObject.forEach( this.applyOutcome.bind( this ) );
         }
     }
     
