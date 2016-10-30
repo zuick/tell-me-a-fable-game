@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Бунтующий принц, Бунтующего принца",
-        "initial": false
+        "initial": true
     },
     {
         "id": 2,
@@ -12,67 +12,62 @@
     {
         "id": 3,
         "name": "Безрогий единорог, Безрого Единорога",
-        "initial": false
+        "initial": true
     },
     {
         "id": 4,
         "name": "Менестрель без слуха, Менестреля без слуха",
-        "initial": false
-    },
-    {
-        "id": 5,
-        "name": "Дракон, Дракона",
-        "initial": false
+        "initial": true
     },
     {
         "id": 6,
         "name": "Чёрный маг, Чёрного мага",
-        "initial": false
+        "initial": true
     },
     {
         "id": 7,
         "name": "Занудный паладин, Занудного паладина",
-        "initial": false
+        "initial": true
     },
     {
         "id": 8,
         "name": "Дерзкая воровка, Дерзкую воровку",
-        "initial": false
+        "initial": true
     },
     {
         "id": 9,
         "name": "Старый оруженосец, Старого оруженосца",
-        "initial": false
+        "initial": true
     },
     {
         "id": 10,
         "name": "Трехрогий минотавр, Трехрогого минотавра",
-        "initial": false
+        "initial": true
     },
     {
         "id": 11,
         "name": "Суровый наемник, Сурового наёмника",
-        "initial": false
+        "initial": true
     },
     {
         "id": 12,
         "name": "Молодой рыцарь, Молодого рыцаря",
-        "initial": false
+        "initial": true
     },
     {
         "id": 13,
         "name": "Глупый булочник, Глупого булочника",
-        "initial": false
+        "initial": true
     },
     {
         "id": 14,
         "name": "Заикающийся алхимик, Заикающегося алхимика",
-        "initial": false
+        "initial": true
     },
     {
         "id": 15,
         "name": "Гениальная чародейка, Гениальную чародейку",
-        "initial": false
+        "initial": true
     },
     {
         "id": 16,
@@ -91,7 +86,7 @@
     },
     {
         "id": 19,
-        "name": "Черного кот, чёрного кота",
+        "name": "черный кот, чёрного кота",
         "initial": false
     },
     {
