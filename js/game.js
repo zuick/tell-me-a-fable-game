@@ -11,7 +11,17 @@ var Game = function(){
         utils.loadResources( this.resources ).then(function( jsons ){
             this.settings = jsons[0];
             this.events = jsons[1];
-            this.items = jsons[2];
+            this.items = jsons[2].map( function( item ){
+                var splited = item.name.split(",");
+                var name = splited[0].trim();
+                var nameAcc = splited.length > 1 
+                    ? splited[1].trim()
+                    : name;
+                
+                item.name = name;
+                item.nameAcc = nameAcc;                
+                return item;
+            });
             this.actions = jsons[3];
             this.outcomes = jsons[4];
             
@@ -181,7 +191,11 @@ var Game = function(){
     
     this.updateSelectors = function(){        
         utils.clearElement(this.selectors);
-        
+        var getOptionSetting = function( item, isAcc ){        
+            console.log(arguments)
+            return { id: item.id, caption: isAcc ? item.nameAcc : item.name };
+        }
+    
         var actionsScope = this.settings.randomizeActions.enable
             ? this.getRandomItems( this.player.actions, this.settings.randomizeActions.limit )
             : this.player.actions;
@@ -190,7 +204,7 @@ var Game = function(){
             utils.createSelect( 
                 "subject", 
                 this.player.squad
-                    .map( this.getOptionSetting )
+                    .map( function( i ){ return getOptionSetting(i) } )
                     .map( function( option ){
                         return { id: option.id, caption: utils.capitalize( option.caption )}; 
                     })
@@ -200,7 +214,7 @@ var Game = function(){
             utils.createSelect( 
                 "action", 
                 actionsScope
-                    .map( this.getOptionSetting )
+                    .map( function( i ){ return getOptionSetting(i) } )
                     .map( function( option ){
                         return { id: option.id, caption: option.caption.toLowerCase() }; 
                     })
@@ -213,7 +227,7 @@ var Game = function(){
                 "object", 
                 this.currentEvent.objects
                     .map( this.getById.bind( this, this.items ) )
-                    .map( this.getOptionSetting )
+                    .map( function( i ){ return getOptionSetting(i,true) } )
             )
         );
     }
@@ -222,13 +236,9 @@ var Game = function(){
         var result = "";
         result += this.getById( this.items, turn.subjectId ).name + " ";
         result += this.getById( this.actions, turn.actionId ).name + " ";
-        result += this.getById( this.items, turn.objectId ).name;
+        result += this.getById( this.items, turn.objectId ).nameAcc;
         
         return utils.capitalize( result );
-    }
-    
-    this.getOptionSetting = function( item ){
-        return { id: item.id, caption: item.name };
     }
     
     this.getById = function( array, id ){ 
@@ -372,7 +382,7 @@ var Game = function(){
         return this.replaceVariables( headings[ _.random( 0, headings.length - 1 ) ].description );
     }
     
-    this.popEvent = function( firstPop ){
+    this.popEvent = function( firstPop ){        
         if( this.nextEvent( firstPop ) && this.player.squad.length > 0 ){
             this.showCurrentEvent();
             if( _.isUndefined( this.currentEvent.objects ) ){
