@@ -1,5 +1,5 @@
 {
-    "playerInitialSubjectsMax": 3,    
+    "playerInitialSubjectsMax": 4,    
     "randomizeActions": {
         "enable": false,
         "limit": 5        

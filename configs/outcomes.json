@@ -335,6 +335,17 @@
                 2
             ],
             "objectIds": [
+                22
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
                 23
             ]
         },
@@ -822,6 +833,363 @@
             ],
             "objectIds": [
                 28
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                1
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 15
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                2
+            ],
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 13
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                2
+            ],
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                4
+            ],
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 26
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                20
+            ],
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 108
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                6
+            ],
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 109
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                6
+            ],
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "subjectId": 16,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                7
+            ],
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 110
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                7
+            ],
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                8
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 111
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                9
+            ],
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 112
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                10
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 113
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                11
+            ],
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 114
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                12
+            ],
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 56
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                13
+            ],
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 115
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                14
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 116
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                14
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                15
+            ],
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 117
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                3
+            ],
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 118
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                16
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 119
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                16
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                20
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 120
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                20
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                16
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 121
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                16
+            ],
+            "objectIds": [
+                16
             ]
         },
         "type": "removeLastSubject"
