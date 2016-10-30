@@ -2,7 +2,7 @@
     {
         "id": 1,
         "description": "Всего через несколько дней герои добрались до Вязенского пруда.\nТам в тени камышей, герои увидели скромного вида лягушечку, золотистого цвета, а прямо над ней в берёзке торчащую стрелу.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -83,7 +83,7 @@
     {
         "id": 10,
         "description": "Они шли через древний лес. Вдруг %randomPlayerSubject% приметил, что на старом дубу на цепях висит сундук. А на нем, свернувшись калачиком, дремлет обычный черный кот.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -101,7 +101,7 @@
     {
         "id": 12,
         "description": "Герои наткнулись на статую Великой Лягухи с табличкой о том, что она пропрыгала более 1 000 миль, а начала свой путь с первого шага.\nПеред статуей сидела - вы не поверите - лягушка.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -137,7 +137,7 @@
     {
         "id": 16,
         "description": "Герои услышали странные стоны в кустах и обнаружили раненого охотника, у которого из колена торчала его собственная стрела.\nБедняга зачем-то рассказал, что когда-то был стражником, а до этого воином, и с ним уже был такой же случай.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -146,7 +146,7 @@
     {
         "id": 17,
         "description": "Кладбище еще никогда не было таким оживленным. Отряд героев, с песнями и болтовней, шел к склепу. Как вдруг перед ними возникли лягушка и черный кот.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -191,7 +191,7 @@
     {
         "id": 22,
         "description": "Лягушка рассказала, что припрыгала сюда из славного города Ляграда. Недавно случилась беда. На город напал дракон, отнял все сокровища, сидит теперь на куче золота и ужасно смердит. %playerSubjects% единогласно решили, что город они спасут, а дракона проучат. Спустя день они стояли на главной площади Ляграда. Вокруг были разбросаны сундучки с сокровищами, а в середине на куче золота спал дракон.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -245,7 +245,7 @@
     {
         "id": 28,
         "description": "%randomPlayerSubject% вдруг вспомнил, что забыл выключить утюг дома, он вежливо извинился и убежал.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -272,7 +272,7 @@
     {
         "id": 31,
         "description": "%playerSubjects% продирались через мусор и паутину подземелья, когда из тьмы возникла железная дверь. Рядом находился рычаг.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -281,7 +281,7 @@
     {
         "id": 32,
         "description": "Наконец-то %playerSubjects% добрались до Забытых руин. Они вошли в большой зал и увидели, что в центре, в треугольнике факелов, возвышается сундук. А недалеко находится рычаг.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -299,7 +299,7 @@
     {
         "id": 34,
         "description": "%randomPlayerSubject% выломал дверь в избушку. С боевыми криками герои ворвались внутрь и замерли от страха... Прямо перед ними лежал дракон и внимательно на них смотрел. Непонятно как он туда поместился и как туда попал, но деваться было некуда.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -308,7 +308,7 @@
     {
         "id": 35,
         "description": "Старая тропа привела героев на зеленую поляну, посреди которой расположился большущий камень.\nНа этом импровизированном природной пьедестале гордо стоял черный ворон, угрюмо наблюдавший за приближением наших незванных гостей.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -353,7 +353,7 @@
     {
         "id": 40,
         "description": "Дорога привела героев в странное место. Казалось, что здесь нет ни стен, ни потолка - сплошная тьма. Но вскоре герои наткнулись на огромного черного ворона.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -398,7 +398,7 @@
     {
         "id": 45,
         "description": "%playerSubjects% долго шли по коридору, пока не натолкнулись на дверь. И рычаг. Да! Там точно был рычаг.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -416,7 +416,7 @@
     {
         "id": 47,
         "description": "%playerSubjects% наконец-то сумели забраться на гору. Там они нашли гнездо. Среди горстки скорлупок сидел жирный черный кот, он явно объелся. А рядом щебетал ворон, пугливо поглядывая на героев.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -425,7 +425,7 @@
     {
         "id": 48,
         "description": "Откуда-то сверху свалился камень, чуть не раздавив %randomPlayerSubject%. Непонятно почему, но герои решили осмотреть необычного посланца.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -434,7 +434,7 @@
     {
         "id": 49,
         "description": "%playerSubjects% крались так тихо, как только могли. Было понятно, что в этой пещере живет жуткий зверь и вот наконец-то они его нашли. Гигантский дракон лежал на камне, свернувшись кольцом.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -479,7 +479,7 @@
     {
         "id": 54,
         "description": "Герои за свою жизнь встречают всякое - гигантские тролли, сундуки сокровищ, ловушки. Но такого %playerSubjects% еще никогда не видели. Посреди поля стояла дверь. И все бы ничего. Ну дверь и дверь. Но тут в нее постучали... С другой стороны! Куда же ведет эта дверь?",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -515,7 +515,7 @@
     {
         "id": 58,
         "description": "Когда герои переходили мутный ручей, на дне %randomPlayerSubject% увидел эльфийский клинок, ни капли не пострадавший от воды, а рядом потертое кольцо.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -524,7 +524,7 @@
     {
         "id": 59,
         "description": "Эта была обычная таверна у дороги - разбавленное пиво и дурная похлебка. Герои уже расположились в своей комнате, когда %randomPlayerSubject% решил открыть шкаф. И то что он там увидел удивило всех... Внутри сидел скелет и обнимал эльфийский клинок.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -533,7 +533,7 @@
     {
         "id": 60,
         "description": "Коридор никак не хотел заканчиваться. Герои были напуганы и очень усталы, но продолжали идти. Как вдруг они услышали стук. Уже ни во что хорошее не веря они поспешили к источнику звука. За первым поворотом они увидели скелета стучащего в дверь.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -542,7 +542,7 @@
     {
         "id": 61,
         "description": "%playerSubjects% нужно было попасть на кладбище. Они шли и шли вдоль высокого забора пока наконец-то не нашли ворота... У которых стоял скелет и махал им рукой.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -551,7 +551,7 @@
     {
         "id": 62,
         "description": "%playerSubjects% помогли странствующему торговцу отбиться от злых гоблинов. Торговец был бесконечно благодарен и подарил героям свое кольцо. И камень. Торговец уверял, что камень необычный. Но в это мало верилось.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -560,7 +560,7 @@
     {
         "id": 63,
         "description": "Герои попали в коридор вдоль стен которого рядами выстроились каменные истуканы. Среди них выделялся один - он был больше и страшнее остальных, а также что-то держал в руках. Приблизившись, герои увидели что в левой руке у него была стрела, а в правой кольцо",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -641,7 +641,7 @@
     {
         "id": 72,
         "description": "%playerSubjects% тяжело ввалились в избушку на курьих ножках. Было видно, что они устали, но отступать не собираются. Баба-яга встретила их у порога и, не дожидаясь вопросов, предложила героям выбрать - зелье или эльфийский клинок.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -650,7 +650,7 @@
     {
         "id": 73,
         "description": "Герои осторожно шли через элбфийские руины, когда %randomPlayerSubject% с громким воплем провалился в дыру, неожиданно появившуюся в полу. Оказалось, что внизу располагается пыльная, но уютная кухонька. На плите в кастрюле бурлило какое-то зелье. А рядом у плиты стоял сундук.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -659,7 +659,7 @@
     {
         "id": 74,
         "description": "В жизни часто приходится делать выбор. Вот и сейчас наши %playerSubjects% оказались на перекрестке в темном лесу. Три дороги уходили каждая в свою сторону и у каждой был свой охранник. Левый путь сторожил клыкастый скелет. Правый путь охранял черный нахохлившийся ворон. А на дороге прямо стоял большой котел с непонятным зельем из которого иногда высовывались щупальца.",
-        "initial": false,
+        "initial": true,
         "heading": false,
         "ending": false,
         "prolog": false,
@@ -671,7 +671,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -680,7 +680,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -689,7 +689,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -698,7 +698,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -707,7 +707,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -716,7 +716,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -725,7 +725,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -734,7 +734,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -743,7 +743,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -752,7 +752,7 @@
         "initial": false,
         "heading": false,
         "ending": false,
-        "prolog": false,
+        "prolog": true,
         "noSubjects": false
     },
     {
@@ -760,7 +760,7 @@
         "description": "Вот так и закончилась эта история. Немного грустно и странно. Но такова история!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -769,7 +769,7 @@
         "description": "%playerSubjects% прошли через все это и сумели выжить. Они вернулись в город и сказочно напились!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -778,7 +778,7 @@
         "description": "Правда это или нет, но вот так все и было. А если не верите, то катитесь к черту!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -787,7 +787,7 @@
         "description": "Каждая история имеет конец. Эта история завершилась именно так.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -796,7 +796,7 @@
         "description": "А дальше они отправились в город. Разделили добычу и каждый пошел домой. Конец!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -805,7 +805,7 @@
         "description": "Решив, что с них хватит, %playerSubjects% вернулись в город. Так и завершилось их приключение.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -814,16 +814,16 @@
         "description": "А дальше... А что было дальше? Да ктож знает. Конец!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
-        "noSubjects": false
+        "noSubjects": true
     },
     {
         "id": 92,
         "description": "%playerSubjects% попали в еще одну передрягу, потом в еще одну и потом еще пару раз. Но в об этом следующий раз. Конец.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -832,7 +832,7 @@
         "description": "И тут %randomPlayerSubject% все надоело, он развернулся и ушел. Другие герои тоже решили не продолжать приключение и вернулись в город. Немного скушноватое окончание, но зато жизненно!",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -841,16 +841,16 @@
         "description": "И все. И дальше ничего не было. Вот так вот. Хлоп! И конец.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
-        "noSubjects": false
+        "noSubjects": true
     },
     {
         "id": 95,
         "description": "После всех этих невероятных приключений герои вернулись к себе домой ( кроме %randomPlayerSubject%, он потерялся по пути ) и стали пить чай с плюшками.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -859,7 +859,7 @@
         "description": "В таверне, которая называлась '%randomItem%' %randomPlayerSubject% заставил всех играть с ним в какую-то дурацкую текстовую игру. Стало так скучно, что %playerSubjects% решили, что пора заканчивать приключение.",
         "initial": false,
         "heading": false,
-        "ending": false,
+        "ending": true,
         "prolog": false,
         "noSubjects": false
     },
@@ -867,7 +867,7 @@
         "id": 97,
         "description": "История о том как %playerSubjects% искали приключений",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -876,7 +876,7 @@
         "id": 98,
         "description": "Необыкновенные приключения %playerSubjects%",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -885,7 +885,7 @@
         "id": 99,
         "description": "Сказка о том, как нельзя делать сказки",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -894,7 +894,7 @@
         "id": 100,
         "description": "Нравоучительная история о героях и их подвигах",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -903,7 +903,7 @@
         "id": 101,
         "description": "Легенда о героях",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -912,7 +912,7 @@
         "id": 102,
         "description": "О том как пойти незнакомо куда и найти приключения",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -921,7 +921,7 @@
         "id": 103,
         "description": "Самая лучшая в мире сказка",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -930,7 +930,7 @@
         "id": 104,
         "description": "Большая сказка о приключениях",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -939,7 +939,7 @@
         "id": 105,
         "description": "Тысяча и одно приключение",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -948,7 +948,7 @@
         "id": 106,
         "description": "Незабываемая легенда",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -957,7 +957,7 @@
         "id": 107,
         "description": "Повесть о нескончаемом приключении",
         "initial": false,
-        "heading": false,
+        "heading": true,
         "ending": false,
         "prolog": false,
         "noSubjects": false
@@ -1087,5 +1087,14 @@
         "ending": false,
         "prolog": false,
         "noSubjects": false
+    },
+    {
+        "id": 122,
+        "description": "Вот так. Никого не осталось.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": true
     }
 ]
