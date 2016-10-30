@@ -17,7 +17,9 @@ var Player = function( initialSquad, initialActions, initialEvents ){
     }
     
     this.getSquadString = function(){
+        var rndFriend = ["его внутренний голос", "его камешек в кармане", "его тень"]
         if( this.squad.length == 0 ) return "";
+        if( this.squad.length == 1 ) return this.squad[0].name + " и " + rndFriend[_.random(0,rndFriend.length -1)];
         
         return ( this.squad.slice( 0, this.squad.length - 1 )
                 .map( function( h ){ return h.name; } )
