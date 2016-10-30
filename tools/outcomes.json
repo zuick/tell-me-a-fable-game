@@ -1,0 +1,26 @@
+[
+    {
+        "type": "nextEvent",
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "eventId": 4
+    },
+    {
+        "type": "newSubject",
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "subjectId": 2
+    }
+]
