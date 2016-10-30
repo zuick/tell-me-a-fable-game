@@ -3,7 +3,8 @@
     "randomizeActions": {
         "enable": false,
         "limit": 5        
-    }
+    },
+    "autoScrollPage": false
 }
 
 

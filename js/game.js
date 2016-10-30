@@ -459,6 +459,7 @@ var Game = function(){
                 this.popEvent();
             }else{
                 this.updateSelectors();
+                if( this.settings.autoScrollPage ) window.scrollTo(0, document.body.scrollHeight);
             }
         } else {
             this.endStory();
