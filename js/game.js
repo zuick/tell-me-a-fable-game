@@ -285,6 +285,7 @@ var Game = function(){
         if( this.player.squad.length > 0 ){
             this.addRow( this.getSpecialEvents("ending" ) );
         }else{
+            this.showCurrentEvent();
             this.addRow( this.getSpecialEvents("noSubjects" ) );
         }
         this.playerAction.classList.toggle("hidden");
@@ -390,10 +391,15 @@ var Game = function(){
         }
     }
     
-    this.popEvent = function( firstPop ){        
-        if( this.nextEvent( firstPop ) && this.player.squad.length > 0 ){
-            this.setCurrentVariables();
-            this.applyEventOutcome();
+    this.popEvent = function( firstPop ){
+        var nextEventExists = this.nextEvent( firstPop );
+        
+        this.setCurrentVariables();
+        this.applyEventOutcome();
+            
+        var playerHasSubjects = this.player.squad.length > 0;
+        
+        if( nextEventExists && playerHasSubjects ){            
             this.showCurrentEvent();
             if( _.isUndefined( this.currentEvent.objects ) ){
                 this.popEvent();
