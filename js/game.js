@@ -281,6 +281,7 @@ var Game = function(){
         );
         
         this.addHeading( this.getSpecialEvents("heading") );
+        this.addRow( this.getSpecialEvents("prolog") );
         this.popEvent( true );
     }
     
