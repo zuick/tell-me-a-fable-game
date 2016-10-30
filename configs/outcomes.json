@@ -1,10 +1,5 @@
 [
     {
-        "type": "newSubject",
-        "subjectId": 8,
-        "condition": {}
-    },
-    {
         "type": "removeLastSubject",        
         "condition": {            
             "actionIds": [0],

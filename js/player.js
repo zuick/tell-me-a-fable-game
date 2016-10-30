@@ -42,7 +42,8 @@ var Player = function( initialSquad, initialActions, initialEvents ){
     }
     
     this.removeHeroById = function( itemId ){
-        _.remove(this.squad, function( item ){ return item.id === itemId });
+        var index = _.findIndex(this.squad, function( item ){ return item.id === itemId });
+        this.squad.splice( index, 1 );
     }
 }
 

@@ -191,8 +191,7 @@ var Game = function(){
     
     this.updateSelectors = function(){        
         utils.clearElement(this.selectors);
-        var getOptionSetting = function( item, isAcc ){        
-            console.log(arguments)
+        var getOptionSetting = function( item, isAcc ){                    
             return { id: item.id, caption: isAcc ? item.nameAcc : item.name };
         }
     
