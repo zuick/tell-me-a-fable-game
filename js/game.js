@@ -147,10 +147,6 @@ var Game = function(){
         }.bind(this));
     }
     
-    this.loadEvent = function( eventId ){
-        this.currentEvent = this.player.pullEventById( eventId );        
-    }
-    
     this.nextEvent = function( firstPop ){
         if( !_.isUndefined( this.currentEvent ) && !_.isUndefined( this.currentEvent.nextEventId ) ){
             this.currentEvent = this.getById( this.events, this.currentEvent.nextEventId );
@@ -176,7 +172,7 @@ var Game = function(){
                 ? _.random( 0, events.length - 1 )
                 : 0;
 
-            this.loadEvent( events[ index ].id );
+            this.currentEvent = this.player.pullEventById( events[ index ].id );
             return true;
         }
     }
@@ -347,18 +343,14 @@ var Game = function(){
         }
     }
     
-    this.replaceVariables = function( text ){
-        var lastSubject = this.getById(this.items, this.lastTurn.subjectId );
-        var lastAction = this.getById(this.actions, this.lastTurn.actionId );
-        var lastObject = this.getById(this.items, this.lastTurn.objectId );
-        var randomItem = this.items[_.random( 0, this.items.length - 1)];
-        var randomPlayerSubject = this.player.squad[_.random( 0, this.player.squad - 1)];
+    this.replaceVariables = function( text, generateNext ){
+        if( generateNext ) this.setCurrentVariables();
         
-        if( !_.isUndefined( lastSubject ) ) text = text.replace(/%lastSubject%/g, lastSubject.name);
-        if( !_.isUndefined( lastAction ) ) text = text.replace(/%lastAction%/g, lastAction.name);
-        if( !_.isUndefined( lastObject ) ) text = text.replace(/%lastObject%/g, lastObject.name);
-        if( !_.isUndefined( randomItem ) ) text = text.replace(/%randomItem%/g, randomItem.name);
-        if( !_.isUndefined( randomPlayerSubject ) ) text = text.replace(/%randomPlayerSubject%/g, randomPlayerSubject.name);
+        if( !_.isUndefined( this.currentVariables.lastSubject ) ) text = text.replace(/%lastSubject%/g, this.currentVariables.lastSubject.name);
+        if( !_.isUndefined( this.currentVariables.lastAction ) ) text = text.replace(/%lastAction%/g, this.currentVariables.lastAction.name);
+        if( !_.isUndefined( this.currentVariables.lastObject ) ) text = text.replace(/%lastObject%/g, this.currentVariables.lastObject.name);
+        if( !_.isUndefined( this.currentVariables.randomItem ) ) text = text.replace(/%randomItem%/g, this.currentVariables.randomItem.name);
+        if( !_.isUndefined( this.currentVariables.randomPlayerSubject ) ) text = text.replace(/%randomPlayerSubject%/g, this.currentVariables.randomPlayerSubject.name);
         text = text.replace(/%playerSubjects%/g, this.player.getSquadString());
         return text;
     }
@@ -377,13 +369,31 @@ var Game = function(){
     }
     
     this.getSpecialEvents = function( category ){
-        var headings = this.events.filter( function( e ){ return e[category]; } );
-        if( _.isUndefined( headings ) ) return "";
-        return this.replaceVariables( headings[ _.random( 0, headings.length - 1 ) ].description );
+        var events = this.events.filter( function( e ){ return e[category]; } );
+        if( _.isUndefined( events ) || events.length <= 0 ) return "";
+        return this.replaceVariables( events[ _.random( 0, events.length - 1 ) ].description, true );
+    }
+    
+    this.setCurrentVariables = function(){
+        this.currentVariables = {
+            lastSubject: this.getById(this.items, this.lastTurn.subjectId ),
+            lastAction: this.getById(this.actions, this.lastTurn.actionId ),
+            lastObject: this.getById(this.items, this.lastTurn.objectId ),
+            randomItem: this.items[_.random( 0, this.items.length - 1)],
+            randomPlayerSubject: this.player.squad[_.random( 0, this.player.squad - 1)]
+        }
+    }
+    
+    this.applyEventOutcome = function(){
+        if( !_.isUndefined( this.currentEvent.removeRandomSubject ) ){            
+            this.player.removeHeroById( this.currentVariables.randomPlayerSubject.id );
+        }
     }
     
     this.popEvent = function( firstPop ){        
         if( this.nextEvent( firstPop ) && this.player.squad.length > 0 ){
+            this.setCurrentVariables();
+            this.applyEventOutcome();
             this.showCurrentEvent();
             if( _.isUndefined( this.currentEvent.objects ) ){
                 this.popEvent();
