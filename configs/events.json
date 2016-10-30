@@ -1,100 +1,1091 @@
 [
     {
         "id": 1,
-        "description": "Всего через несколько дней герои добрались до Вязенского пруда. Там в тени камышей, герои увидели скромного вида лягушечку, золотистого цвета, а прямо над ней в берёзке торчащую стрелу.",
-        "initial": true,
-        "objects": [8,9]
+        "description": "Всего через несколько дней герои добрались до Вязенского пруда.\nТам в тени камышей, герои увидели скромного вида лягушечку, золотистого цвета, а прямо над ней в берёзке торчащую стрелу.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 2,
-        "description": "Что-то у него в животе забурлило, затем вроде поутихло, потом вдруг %lastSubject% покрылся зеленью и пупырышками, и наконец издав вопросительное \"Ква?\" он превратился в лягушку. А потом сверху её придавило сундуком.",
-        "objects": [7]
+        "description": "Что-то у него в животе забурлило, затем вроде поутихло, потом вдруг %lastSubject% покрылся зеленью и пупырышками, и наконец издав вопросительное \"\"Ква?\"\" он превратился в лягушку. %randomPlayerSubject% подобрал беднягу и положил в карман. Герои вернулись на дорогу.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 3,
         "description": "Это было непросто, однако, он справился. И даже получил некоторое удовольствие, от удивлённых взглядов друзей.",
-        "nextEventId": 11
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 4,
-        "description": "Этого невероятно странного события %lastObject% ждал почти всю свою жизнь. Теперь, когда %lastSubject% продемонстрировал свою любовь и заклятие спало он снова может принять свою истинную форму! Форму человека-сундука."        
+        "description": "Этого невероятно странного события сундук ждал почти всю свою жизнь. Теперь, когда %lastSubject% продемонстрировал свою любовь и заклятие спало он снова может принять свою истинную форму! Форму человека-сундука.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 5,
-        "description": "Пинок вышел недурственный, крышка тут же откинулась. %randomPlayerSubject% подошёл к сундуку и заглянул внутрь. На дне лежала эльфийская стрела.",
-        "objects": [7,9]
+        "description": "Крышка скрипнула. Из ниоткуда возникли длинные крючковатые руки и схватили незадачливого пинателя. Чудовище утянуло  %lastPlayerSubject% в пасть. Послышалось громкое чавканье, треск ломаемых костей и вскоре все затихло. Наступила неприятная тишина.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 6,
         "description": "Каким-то неведомым образом лягушка вмиг стала твёрдой как камень и от удара ей ничего не сделалось. %lastSubject% же вывихнул руку.",
-        "objects": [8]
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 7,
-        "description": "Для него это оказалось не так уж сложно. Однако, c увеличенным животом в форме сундука, %lastSubject%, совершенно потерял способность к перемещёнию."
+        "description": "Для него это оказалось не так уж сложно. Однако, c увеличенным животом в форме сундука, %lastSubject%, совершенно потерял способность к перемещёнию",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 8,
         "description": "Герои притаились, вокруг затихли птицы. Прошли секунды. Затем минуты. Но ничего не происходило. %randomPlayerSubject% не выдержал, перезагрузил локацию и попробовал поцеловать ещё раз. Но нет, не та лягушка.",
-        "objects": [8]        
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 9,
-        "description": "Естественно он поранился. Разозлившись %lastObject% решил, что здесь им больше нечего делать.",
-        "nextEventId": 11
+        "description": "Естественно он поранился. Разозлившись, %lastSubject% решил, что здесь им больше нечего делать.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 10,
-        "description": "Они шли через древний лес. Вдруг %randomPlayerSubject% приметил, что на старом дубу на цепях висит сундук.",
-        "initial": true,
-        "objects": [7]        
+        "description": "Они шли через древний лес. Вдруг %randomPlayerSubject% приметил, что на старом дубу на цепях висит сундук. А на нем, свернувшись калачиком, дремлет обычный черный кот.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 11,
-        "description": "%playerSubjects% двинулись дальше"
+        "description": "%playerSubjects% двинулись дальше",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 12,
-        "description": "Герои наткнулись на статую Великой Лягухи. На табличке под статуей можно было разобрать, что Великая Лягуха пропрыгала более 100000 миль",
-        "initial": true,
-        "objects": [8]
-    },    
-    {
-        "id": 201,
-        "heading": true,
-        "description": "История о том как %playerSubjects% искали приключений"
+        "description": "Герои наткнулись на статую Великой Лягухи с табличкой о том, что она пропрыгала более 1 000 миль, а начала свой путь с первого шага.\nПеред статуей сидела - вы не поверите - лягушка.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
-        "id": 202,
-        "heading": true,
-        "description": "%randomPlayerSubject% и %randomItem%"
+        "id": 13,
+        "description": "- Хо-хо-хо, - довольно захлопал своей крышкой Человек-сундук.\n- Человек-сундук стал Сундуком-каннибалом!, - закричал %randomPlayerSubject%. - Ему не место рядах нашей партии! Мы изгоняем тебя, мерзкий людо... сундуко... А! Человек-сундукоед! Убирайся прочь!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
-        "id": 203,
-        "ending": true,
-        "description": "После всех этих невероятных приключений герои вернулись к себе домой ( кроме %randomPlayerSubject%, он потерялся по пути ) и стали пить чай с плюшками."
+        "id": 14,
+        "description": "Чем остался очень доволен. Ну а что еще ждать от такого?",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
-        "id": 204,
-        "ending": true,
-        "description": "В таверне, которая называлась '%randomItem%' %randomPlayerSubject% заставил всех играть с ним в какую-то дурацкую текстовую игру. Стало так скучно, что %playerSubjects% решили, что пора заканчивать приключение."
+        "id": 15,
+        "description": "И конечно же, ничего не произошло. Это не та сказка, которую вы ищите.\nСтараясь не смотреть друг на друга, герои пошли дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
-        "id": 205,
-        "noSubjects": true,
-        "description": "Вот и сказочки конец"
+        "id": 16,
+        "description": "Герои услышали странные стоны в кустах и обнаружили раненого охотника, у которого из колена торчала его собственная стрела.\nБедняга зачем-то рассказал, что когда-то был стражником, а до этого воином, и с ним уже был такой же случай.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 17,
+        "description": "Кладбище еще никогда не было таким оживленным. Отряд героев, с песнями и болтовней, шел к склепу. Как вдруг перед ними возникли лягушка и черный кот.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 18,
+        "description": "Подхватив страшный вирус котейной милашности, %lastSubject% покрылся шерстью, у него выросли кошачьи ушки и хвост, руки поджались к груди, а изо рта вырвалось предсказуемое \"\"ня!\"\".\nК счастью, все это тут же исчезло, потому что это сказка, а не фурри-фанфик.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 19,
+        "description": "За такой поворот сюжета нас могут засудить защитники прав животных, поэтому %lastSubject% поперхнулся, выпучил глаза, замахал руками, упал на землю, забился в конвульсия и умер в агонии. Не рекомендуем повторять увиденное, все трюки выполнялись профессиональными каскадерами.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 20,
+        "description": "Зверек отскочил в сторону, зашипел на обидчика и, злобно оглядываясь на героев, гордо удалился по своим черным кошачьим делам.\n*** Персонаж запомнил ваш выбор. ***",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 21,
+        "description": "Он бы еще у ясеня спросил...\nХотя сундук не только его услышал, но и даже ответил, и ответ этот был несколько странным: \"\"Ударь меня! Ну пожалуйста, ударь меня полностью!\"\"",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 22,
+        "description": "Лягушка рассказала, что припрыгала сюда из славного города Ляграда. Недавно случилась беда. На город напал дракон, отнял все сокровища, сидит теперь на куче золота и ужасно смердит. %playerSubjects% единогласно решили, что город они спасут, а дракона проучат. Спустя день они стояли на главной площади Ляграда. Вокруг были разбросаны сундучки с сокровищами, а в середине на куче золота спал дракон.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 23,
+        "description": "Поначалу показалось, что дракон не отреагировал, однако, затем он поднял одну лапу и почесал поцелованное место. Герои решили, что дракон какой-то неправильный и отправились в путешествие дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 24,
+        "description": "Ему не очень понравилось. \"\"Раньше драконы были вкуснее\"\" - проворчал %lastSubject%.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 25,
+        "description": "Дракон рассвирепел, развернулся к обидчикам, набрал полные лёгкие воздуха и уже огнём собрался палить героев, но забыл, что у него драконий Дизискрин. Так и дунул без огня. Герои от такого ветра улетели далеко за горизонт.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 26,
+        "description": "И внезапно рычаг ответил! Кто бы мог подумать? Рычаг рассказал свою грустную историю, как он раньше был веткой шикарного дуба и качался в такт ветру. Растроганный, он сам переключился.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 27,
+        "description": "Затем они ещё немного пошушукались о своём, посмеялись, а после дракон заявил, что пойдёт вместе с героями.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 28,
+        "description": "%randomPlayerSubject% вдруг вспомнил, что забыл выключить утюг дома, он вежливо извинился и убежал.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 29,
+        "description": "И... Ничего не произошло! Неожиданно, правда?",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 30,
+        "description": "Рычаг сменил положение и дверь, скрипя, отворилась. %playerSubjects% пошли дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 31,
+        "description": "%playerSubjects% продирались через мусор и паутину подземелья, когда из тьмы возникла железная дверь. Рядом находился рычаг.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 32,
+        "description": "Наконец-то %playerSubjects% добрались до Забытых руин. Они вошли в большой зал и увидели, что в центре, в треугольнике факелов, возвышается сундук. А недалеко находится рычаг.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 33,
+        "description": "Никто этого не ожидал, особенно %lastSubject%. Герой покрылся синими пятнами и... Взорвался!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 34,
+        "description": "%randomPlayerSubject% выломал дверь в избушку. С боевыми криками герои ворвались внутрь и замерли от страха... Прямо перед ними лежал дракон и внимательно на них смотрел. Непонятно как он туда поместился и как туда попал, но деваться было некуда.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 35,
+        "description": "Старая тропа привела героев на зеленую поляну, посреди которой расположился большущий камень.\nНа этом импровизированном природной пьедестале гордо стоял черный ворон, угрюмо наблюдавший за приближением наших незванных гостей.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 36,
+        "description": "А потом еще раз, а потом еще, и снова, и снова, и снова. Героям пришлось силой оттащить пришедшего в исступление сотоварища и хорошенько поколотить его, пока он не пришел в себя. А от этого явно заколдованного место решили поскорее убраться подальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 37,
+        "description": "Кот насторожено поднял ушки, повилял хвостом и недалеко отбежал. Кот явно приглашал героев за собой. Они шли некоторое время вместе, пока кот не остановился. Он еще раз повилял хвостом и убежал.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 38,
+        "description": "Добром это, конечно, не кончилось. %lastSubject% ходить больше не мог, поэтому герои оставили странного обжору и двинулись дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 39,
+        "description": "- С одной стороны, мы можем предположить, что всё в мире взаимосвязано, и проистекает одно из другого, опираясь на причинно-следственные связи. - начал разглагольствовать камень. - Но если подняться на метафизический уровень, то может оказаться, что такие системообразующие предрасположенности могут быть сформированы слепым случаем, быть результатом действования кристалльно хаотичных сил.\nГерои решили, что камень слишком философский, быстренько распрощались и пошли дальше...",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 40,
+        "description": "Дорога привела героев в странное место. Казалось, что здесь нет ни стен, ни потолка - сплошная тьма. Но вскоре герои наткнулись на огромного черного ворона.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 41,
+        "description": "Ворон от таких нежностей опешил, но не растерялся и клюнул целовальщика точно в глаз, поставив крест на его карьере приключенца.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 42,
+        "description": "Судя по этому странному действию, %lastSubject% мечтал о карьере и славе Оззи Озборна, но так и не понял, в чем секрет его успеха.\n\"\"Ох уж, эти культисты культуры карго-культов,\"\" - может подумать эрудированный и рефлексирующий игрок, и будет прав в своей оценке. А герои, посмеявшись над выходкой товарища, потопали дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 43,
+        "description": "Птица упала замертво.\nГлупое и жестокое действие, неожиданная и нелепая смерть.\n%randomPlayerSubject% в приступе ужаса экзистенциальности решил покинуть отряд и подался в отшельники.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 44,
+        "description": "Вероятно, дверь была магическая. А может и самая обыкновенная, но нежностей не ожидала и растаяла. Буквально.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 45,
+        "description": "%playerSubjects% долго шли по коридору, пока не натолкнулись на дверь. И рычаг. Да! Там точно был рычаг.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 46,
+        "description": "- Карр! - ответил ворон. - Кагги-Карр! - уточнил на всякий он.\n- Ну вот и поговорили, - пробормотал %lastSubject% и, крепко задумавшись, повел героев новой дорогой.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 47,
+        "description": "%playerSubjects% наконец-то сумели забраться на гору. Там они нашли гнездо. Среди горстки скорлупок сидел жирный черный кот, он явно объелся. А рядом щебетал ворон, пугливо поглядывая на героев.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 48,
+        "description": "Откуда-то сверху свалился камень, чуть не раздавив %randomPlayerSubject%. Непонятно почему, но герои решили осмотреть необычного посланца.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 49,
+        "description": "%playerSubjects% крались так тихо, как только могли. Было понятно, что в этой пещере живет жуткий зверь и вот наконец-то они его нашли. Гигантский дракон лежал на камне, свернувшись кольцом.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 50,
+        "description": "- ТЫ НЕ ПРОЙДЕШЬ!!! - что есть мочи заорала дверь в ответ, и героям пришлось убраться несолоно хлебавши.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 51,
+        "description": "На удивление дверь имела приятный запах и вкус. Немного специй, чутка посолить и вуаля! Прекрасный обед. Однако другие герои не оценили вкусы гурмана и поспешили уйти.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 52,
+        "description": "Дверь ударила в ответ. Потому что дверь была на пружинах.\n\"\"Когда ты ударяешь дверь, она ударяет в ответ. Остерегайся пружин и сам стань пружиной,\"\" - записал в свой блокнот %randomPlayerSubject% (он собирал материал для своей новой книги - сборника мудрых мыслей и афоризмов), и герои пошли дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 53,
+        "description": "От удара он рассыпался на косточки, которыми была выложена надпись: \"\"Ухадити!\"\" (неграмотный скелет попался)",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 54,
+        "description": "Герои за свою жизнь встречают всякое - гигантские тролли, сундуки сокровищ, ловушки. Но такого %playerSubjects% еще никогда не видели. Посреди поля стояла дверь. И все бы ничего. Ну дверь и дверь. Но тут в нее постучали... С другой стороны! Куда же ведет эта дверь?",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 55,
+        "description": "Вы точно представляете, как выглядит скелет? Даже если предположить, что в его пустом черепе (не от глупости, просто мозга в нем уже нет) была какая-то мысль, которую он хотел бы донести до ваших героев, то он физически бы не смог это сделать! Ну сами подумайте: языка нет, челюсть нечем двигать. В общем, пусть герои идут дальше, а вы лучше пока учебник анатомии полистайте чтоли.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 56,
+        "description": "Молодой рыцарь уверенно замахнулся и нанес удар по скелету... Но неожиданно скелет перехватил кулак героя и ответил хуком слева. Герой ловко увернулся и нанес удар ногой по коленям, но скелет сделал шаг назад и ответил апперкотом... Через полчаса спарринга Молодой рыцарь устало осел на землю. Скелет же показал большой палец, продемонстрировал еще парочку ударов и похлопал героя по плечу. Тренировка удалась!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 57,
+        "description": "Я даже не знаю, как к такому относиться...\nКаннибализм имеет какой-то смысл, хоть и не укладывается в рамки современной морали. Но... тупо есть человеческие кости?!\nЧто же такое происходит с этими героями?! Как дальше рассказывать эту сказку после такого?!\n%lastSubject% должен исчезнуть из нее навсегда...",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 58,
+        "description": "Когда герои переходили мутный ручей, на дне %randomPlayerSubject% увидел эльфийский клинок, ни капли не пострадавший от воды, а рядом потертое кольцо.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 59,
+        "description": "Эта была обычная таверна у дороги - разбавленное пиво и дурная похлебка. Герои уже расположились в своей комнате, когда %randomPlayerSubject% решил открыть шкаф. И то что он там увидел удивило всех... Внутри сидел скелет и обнимал эльфийский клинок.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 60,
+        "description": "Коридор никак не хотел заканчиваться. Герои были напуганы и очень усталы, но продолжали идти. Как вдруг они услышали стук. Уже ни во что хорошее не веря они поспешили к источнику звука. За первым поворотом они увидели скелета стучащего в дверь.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 61,
+        "description": "%playerSubjects% нужно было попасть на кладбище. Они шли и шли вдоль высокого забора пока наконец-то не нашли ворота... У которых стоял скелет и махал им рукой.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 62,
+        "description": "%playerSubjects% помогли странствующему торговцу отбиться от злых гоблинов. Торговец был бесконечно благодарен и подарил героям свое кольцо. И камень. Торговец уверял, что камень необычный. Но в это мало верилось.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 63,
+        "description": "Герои попали в коридор вдоль стен которого рядами выстроились каменные истуканы. Среди них выделялся один - он был больше и страшнее остальных, а также что-то держал в руках. Приблизившись, герои увидели что в левой руке у него была стрела, а в правой кольцо",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 64,
+        "description": "%lastSubject% ловко ухватился за рукоять и, словно базарный шпагоглотатель, уверенно засунул клинок себе в рот. Но он не был шпагоглотателем. Он умер. Мучительно и неприятно.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 65,
+        "description": "%lastSubject% задал пару вопросов, утвердительно покивал. Затем кинул клинок на землю, зло развернулся и стал удаляться. Друзья догнали его и на вопрос \"\"Что случилось?\"\", получили странный ответ \"\"Он послал меня!\"\". Герои переглянулись, но решили ничего не уточнять и пошли дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 66,
+        "description": "Наверно создатели этого кольца ожидали чего-то подобного, иначе как объяснить, что когда %lastSubject% со всей силы ударил кольцо, то превратился в лягушку!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 67,
+        "description": "Кольцо затряслось, нагрелось и полыхнуло синим пламенем. %lastSubject% напугался и бросил кольцо на землю, но больше ничего не происходило.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 68,
+        "description": "Если бы все были такими милыми! Зелье забулькало, запенилось и поменяло цвет на нежно-розовый. Приятно запахло розами.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 69,
+        "description": "Опрометчиво так поступать со всякими незнакомыми жидкостями. И чтобы показать, как это опасно. Скажем что... Герой испарился!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 70,
+        "description": "Воу воу! Откуда столько агрессии? Зачем? Но, допустим, что это была случайность. Поэтому все остались живы и мирно разошлись.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 71,
+        "description": "Яркая вспышка, клубы серого дыма. Огонь! И вместо %lastSubject% появился дракон!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 72,
+        "description": "%playerSubjects% тяжело ввалились в избушку на курьих ножках. Было видно, что они устали, но отступать не собираются. Баба-яга встретила их у порога и, не дожидаясь вопросов, предложила героям выбрать - зелье или эльфийский клинок.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 73,
+        "description": "Герои осторожно шли через элбфийские руины, когда %randomPlayerSubject% с громким воплем провалился в дыру, неожиданно появившуюся в полу. Оказалось, что внизу располагается пыльная, но уютная кухонька. На плите в кастрюле бурлило какое-то зелье. А рядом у плиты стоял сундук.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 74,
+        "description": "В жизни часто приходится делать выбор. Вот и сейчас наши %playerSubjects% оказались на перекрестке в темном лесу. Три дороги уходили каждая в свою сторону и у каждой был свой охранник. Левый путь сторожил клыкастый скелет. Правый путь охранял черный нахохлившийся ворон. А на дороге прямо стоял большой котел с непонятным зельем из которого иногда высовывались щупальца.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 75,
+        "description": "Настал этот день! %playerSubjects% собрались в своей любимой таверне, еще раз все обговорили, проверили снаряжение и отправились на встречу приключениям!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 76,
+        "description": "Увы, мир жесток. И за свои поступки нужно нести ответственность. %playerSubjects% были обязаны отправиться в это опасное путешествие, иначе бы их отправили за решетку.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 77,
+        "description": "Странная это профессия - искатель приключений. Кто знает почему они встретились? Но теперь %playerSubjects% одна команда и впереди их ждет новое приключение!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 78,
+        "description": "Добро пожаловать в свою историю! %playerSubjects% ждут тебя. Ну что? Начнем приключение!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 79,
+        "description": "Годы идут, времена меняются, а люди нет. Очередная группа храбрецов отправляется навстречу очередным опасностям. Что же их там ждет?",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 80,
+        "description": "У каждой истории есть начало. И здесь начинается ваша.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 81,
+        "description": "Прекрасная история жаждет начаться! Ну что же вы сидите? Вперед! К приключениям!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 82,
+        "description": "Возможно все это рок судьбы, возможно чистая случайность. Но события тех дней на всю жизнь запомнились %playerSubjects%. Это было самое необычное приключение из всех, что у них были.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 83,
+        "description": "Хотите, историю? Пожалуйста! Усаживайтесь по-удобнее, выпейте эля и заткнитесь. Приключение начинается!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 84,
+        "description": "Всем уже надоели эти истории о героях и их приключениях. Но вам придется потерпеть и выслушать еще одну. Вот как она началась.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 85,
+        "description": "Вот так и закончилась эта история. Немного грустно и странно. Но такова история!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 86,
+        "description": "%playerSubjects% прошли через все это и сумели выжить. Они вернулись в город и сказочно напились!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 87,
+        "description": "Правда это или нет, но вот так все и было. А если не верите, то катитесь к черту!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 88,
+        "description": "Каждая история имеет конец. Эта история завершилась именно так.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 89,
+        "description": "А дальше они отправились в город. Разделили добычу и каждый пошел домой. Конец!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 90,
+        "description": "Решив, что с них хватит, %playerSubjects% вернулись в город. Так и завершилось их приключение.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 91,
+        "description": "А дальше... А что было дальше? Да ктож знает. Конец!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 92,
+        "description": "%playerSubjects% попали в еще одну передрягу, потом в еще одну и потом еще пару раз. Но в об этом следующий раз. Конец.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 93,
+        "description": "И тут %randomPlayerSubject% все надоело, он развернулся и ушел. Другие герои тоже решили не продолжать приключение и вернулись в город. Немного скушноватое окончание, но зато жизненно!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 94,
+        "description": "И все. И дальше ничего не было. Вот так вот. Хлоп! И конец.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 95,
+        "description": "После всех этих невероятных приключений герои вернулись к себе домой ( кроме %randomPlayerSubject%, он потерялся по пути ) и стали пить чай с плюшками.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 96,
+        "description": "В таверне, которая называлась '%randomItem%' %randomPlayerSubject% заставил всех играть с ним в какую-то дурацкую текстовую игру. Стало так скучно, что %playerSubjects% решили, что пора заканчивать приключение.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 97,
+        "description": "История о том как %playerSubjects% искали приключений",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 98,
+        "description": "Необыкновенные приключения %playerSubjects%",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 99,
+        "description": "Сказка о том, как нельзя делать сказки",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 100,
+        "description": "Нравоучительная история о героях и их подвигах",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 101,
-        "prolog": true,
-        "description": "Хотите, историю? Пожалуйста! Усаживайтесь по-удобнее, выпейте эля и заткнитесь. Приключение начинается!"
+        "description": "Легенда о героях",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     },
     {
         "id": 102,
-        "initial": true,
-        "description": "%randomPlayerSubject% вдруг вспомнил, что забыл выключить утюг дома, он вежливо извинился и убежал.",
-        "removeRandomSubject": true
+        "description": "О том как пойти незнакомо куда и найти приключения",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 103,
+        "description": "Самая лучшая в мире сказка",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 104,
+        "description": "Большая сказка о приключениях",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 105,
+        "description": "Тысяча и одно приключение",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 106,
+        "description": "Незабываемая легенда",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 107,
+        "description": "Повесть о нескончаемом приключении",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 108,
+        "description": "Дракон ударил мощной лапой. Дверь пыталась было защищаться, но мощь Дракона была слишком большой. С грохотом дверь разнесло на миллиард щепок. Герои восхищенно смотрели на своего побратима.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 109,
+        "description": "Сколько жестокости в этом поступке! Но погодите-ка... Ворон не умер и даже не покачнулся. Он превратился в лягушку! Похоже черный маг совершил какой-то темный ритуал, но это неважно. В отряде новый герой!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 110,
+        "description": "- С одной стороны, мы можем предположить, что всё в мире взаимосвязано, и проистекает одно из другого, опираясь на причинно-следственные связи. - Но не стоит забывать, что иногда в жизнь каждого вмешиваются высшие силы, что ломает привычное течение взаимосвязей - продолжил Занудный паладин. - Т.е. вы хотите сказать, что существует некий высший организм. который управляет нашими судьбами? Выбирает, что и кому делать? Не смешите меня! Разговор продолжался очень долго, оппоненты сыпали друг другу аргументы, докапывались до истинности бытия и копались в причинах происхождения тех или иных исторических событий. Однако другие герои не стали дожидаться завершения этой увлекательной беседы. Они ушли.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 111,
+        "description": "Поцелуй был долгим и страстным. Воровка никак не хотела останавливаться... Но вдруг раздался щелчок. Она отпрянула от черепа, в губах у нее была чека. - Это мина! Я разминировала ее своим языком! Учитесь, салаги. Ошарашенные таким мастерством герои, пошли дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 112,
+        "description": "И хоть бы хны! Старый вояка настолько привык к полевой кухне, что мог есть камни горстями. Правда никто не понял зачем он это продемонстрировал.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 113,
+        "description": "Это было мерзко и неприятно. Рычагу не понравилось, и он передвинулся не туда куда надо было. Сработала ловушка и убила %randomPlayerSubject%",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 114,
+        "description": "Впечатляющее зрелище! Наемник был настолько суров, что спокойно откусывал ломти от клинка. Пара мощных движений челюстью и клинка как не бывало. А наемник даже повеселел.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 115,
+        "description": "- ТЫ НЕ... Марти? Марти это ты? - Привет Дора. - О, Марти! Я так давно тебя не видела. Как ты! Герои удивленно переглянулись, перед ними разворачивалась душещипательная сцена. Бывшие возлюбленные наконец-то встретились! Дабы не мешать этому удивительному событию. герои тихонько сбежали.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 116,
+        "description": "Похоже алхимик потому и стал заикаться, что часто целовал свои зелья. В небо взметнулся столб огня, а вокруг стало неприятно темно. %randomPlayerSubject% достал свое оружие, но тут же был сражен молнией. Алхимик не своим голосом произнес \"\"Уходите. Или все умрете\"\".",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 117,
+        "description": "Лягушка успела затвердеть, но не тут-то было! Чародейка знала об этой особенности лягушек и мгновенно произнесла заклинание. Ее рука превратилась в алмазный клинок и рассекла лягушку.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 118,
+        "description": "Да. Такое бывает. Одни едят других и ничего плохого при этом не происходит. Проходите дальше, здесь не на что смотреть. Бедный котик...",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 119,
+        "description": "Лягушка покрылась синими пятнами и... превратилась в человеческий скелет! Вот это чудеса!",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 120,
+        "description": "Они встретились взглядом. Ураган эмоций пронесся в этом мимолетном соприкосновении душ. Но все было решено. Теперь они живут вместе. А герои и их приключения могут идти дальше.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
+    },
+    {
+        "id": 121,
+        "description": "Две лягушки встретились. Они были абсолютно одинаковыми внешне. Даже движениями они повторяли другу друга, словно в зеркале. Наконец они решились дотронуться друг до друга и тут.... БУУУУМ!!! Гигантский астероид упал ровно на то место, где раньше были лягушки. К несчатью даже %randomPlayerSubject% зацепило.",
+        "initial": false,
+        "heading": false,
+        "ending": false,
+        "prolog": false,
+        "noSubjects": false
     }
 ]
-
-
