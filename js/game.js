@@ -344,6 +344,33 @@ var Game = function(){
         }
     }
     
+    this.applyOutcomes = function( lastTurn ){
+        var passedOutcomes = this.outcomes.filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) );        
+        var concreteSubjectActionObject = passedOutcomes
+            .filter( function( o ){ 
+                return !_.isUndefined( o.condition.subjectIds ) && !_.isUndefined( o.condition.actionIds ) && !_.isUndefined( o.condition.objectIds )
+            })
+            
+        var concreteActionObject = passedOutcomes
+            .filter( function( o ){ 
+                return !_.isUndefined( o.condition.actionIds ) && !_.isUndefined( o.condition.objectIds )
+            });
+
+        var concreteSubjectObject = passedOutcomes
+            .filter( function( o ){ 
+                return !_.isUndefined( o.condition.subjectIds ) && !_.isUndefined( o.condition.objectIds )
+            })
+        
+        // apply by priority
+        if( concreteSubjectActionObject.length > 0 ){
+            concreteSubjectActionObject.forEach( this.applyOutcome.bind( this ) );
+        }else if( concreteSubjectObject.length > 0 ){
+            concreteSubjectObject.forEach( this.applyOutcome.bind( this ) );
+        }else{
+            concreteSubjectObject.forEach( this.applyOutcome.bind( this ) );
+        }
+    }
+    
     this.replaceVariables = function( text, generateNext ){
         if( generateNext ) this.setCurrentVariables();
         
@@ -360,11 +387,7 @@ var Game = function(){
         e.preventDefault();
         
         this.lastTurn = this.getPlayerTurn();
-                
-        this.outcomes
-            .filter( this.checkEventOutcomeCondition.bind( this, this.lastTurn ) )
-            .forEach( this.applyOutcome.bind( this ) );            
-                        
+        this.applyOutcomes( this.lastTurn );
         this.addRow( "<b>" + this.getTurnString( this.lastTurn ) + "</b>");
         this.popEvent();
     }
