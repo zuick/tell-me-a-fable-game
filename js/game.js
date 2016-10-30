@@ -48,7 +48,7 @@ var Game = function(){
                 var a = this.getByIds( array, outcomes.condition[category] );
                 
                 return this.getByIds( array, outcomes.condition[category] )
-                    .map( function( i ){ return i.name } )
+                    .map( function( i, index ){ return _.isUndefined(i) ? "incorrect item " + index : i.name } )
                     .join(", ")
             }
             return false;
@@ -64,7 +64,10 @@ var Game = function(){
             var initialsTable = utils.createTable();
             var noSubjectsTable = utils.createTable();
             var endingsTable = utils.createTable();
-
+            var prologsTable = utils.createTable();
+            
+            var itemsTable = utils.createTable();
+            
             this.events
                 .filter( function( e ){ return e.heading; } )
                 .forEach( function( e ){
@@ -94,6 +97,21 @@ var Game = function(){
                 .forEach( function( e ){
                     noSubjectsTable.tBodies[0].appendChild(
                         utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+                
+            this.events
+                .filter( function( e ){ return e.prolog; } )
+                .forEach( function( e ){
+                    prologsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.description )
+                    );
+                }.bind(this));
+                
+            this.items                
+                .forEach( function( e ){
+                    itemsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.name, e.nameAcc )
                     );
                 }.bind(this));
             
@@ -132,14 +150,18 @@ var Game = function(){
                 
             }.bind(this));
             
+            page.appendChild( utils.createHeading( "Items" ) );
+            page.appendChild( itemsTable );
             page.appendChild( utils.createHeading( "Headings" ) );
             page.appendChild( headingsTable );
+            page.appendChild( utils.createHeading( "Prologs" ) );
+            page.appendChild( prologsTable );
+            page.appendChild( utils.createHeading( "Initial events" ) );
+            page.appendChild( initialsTable );
             page.appendChild( utils.createHeading( "Endings" ) );
             page.appendChild( endingsTable );
             page.appendChild( utils.createHeading( "No subjects" ) );
             page.appendChild( noSubjectsTable );
-            page.appendChild( utils.createHeading( "Initial events" ) );
-            page.appendChild( initialsTable );
             page.appendChild( utils.createHeading( "Outcomes" ) );
             page.appendChild( outcomesTable );
             
