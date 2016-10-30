@@ -16,10 +16,10 @@ try{
     console.error(e);
 }
 
-var events = [];
+var objects = [];
 switch( type ){
     case "events": 
-        events = csv
+        objects = csv
             .split("\r\n")
             .map( function( row, index ){
                 return {
@@ -34,7 +34,7 @@ switch( type ){
             } );
         break;
     case "items": 
-        events = csv
+        objects = csv
             .split("\r\n")
             .map( function( row, index ){
                 return {
@@ -44,11 +44,49 @@ switch( type ){
                 }
             } );
         break;
+    case "outcomes":
+        objects = csv
+            .split("\r\n")
+            .map( function( row, index ){
+                var h = row.split("|")[0];
+                var c = row.split("|")[1].split(",").map( function( i ){ return i.trim() } );
+        
+                var type = h.split(",")[0].trim();
+                var oid = parseInt(h.split(",")[1].trim());
+                
+                var out = {
+                    type: type,
+                    condition: {
+                        subjectIds: parseInt(c[0]) !== -1 ? [parseInt(c[0])] : void 0,
+                        actionIds: parseInt(c[1]) !== -1 ? [parseInt(c[1])] : void 0,
+                        objectIds: parseInt(c[2]) !== -1 ? [parseInt(c[2])] : void 0
+                    }
+                };
+                
+                switch( type ){
+                    case "newSubject":
+                        out.subjectId = oid;
+                        break;
+                    case "removeLastSubject": 
+                        
+                        break;
+                    case "removeSubject":
+                        out.subjectId = oid;
+                        break;
+                    case "nextEvent":
+                        out.eventId = oid;
+                        break;
+                    default: break;
+                }
+                
+                return out;
+            } );
+        break;
     default: break;
 }
 
 try{
-    fs.writeFileSync( target, JSON.stringify( events, null, '    ' ));
+    fs.writeFileSync( target, JSON.stringify( objects, null, '    ' ));
 }catch(e){
     console.error(e);
 }
