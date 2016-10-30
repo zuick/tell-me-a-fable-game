@@ -55,7 +55,6 @@ switch( type ){
                 var oid = parseInt(h.split(",")[1].trim());
                 
                 var out = {
-                    type: type,
                     condition: {
                         subjectIds: parseInt(c[0]) !== -1 ? [parseInt(c[0])] : void 0,
                         actionIds: parseInt(c[1]) !== -1 ? [parseInt(c[1])] : void 0,
@@ -64,16 +63,19 @@ switch( type ){
                 };
                 
                 switch( type ){
-                    case "newSubject":
+                    case "ns":
+                        out.subjectId = oid;
+                        out.type = "newSubject";
+                        break;
+                    case "rls": 
+                        out.type = "removeLastSubject";                        
+                        break;
+                    case "rs":
+                        out.type = "removeSubject";                        
                         out.subjectId = oid;
                         break;
-                    case "removeLastSubject": 
-                        
-                        break;
-                    case "removeSubject":
-                        out.subjectId = oid;
-                        break;
-                    case "nextEvent":
+                    case "ne":
+                        out.type = "nextEvent";                        
                         out.eventId = oid;
                         break;
                     default: break;
