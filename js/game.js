@@ -65,7 +65,7 @@ var Game = function(){
             var noSubjectsTable = utils.createTable();
             var endingsTable = utils.createTable();
             var prologsTable = utils.createTable();
-            
+            var actionsTable = utils.createTable();
             var itemsTable = utils.createTable();
             
             this.events
@@ -114,6 +114,13 @@ var Game = function(){
                         utils.createTableRow( e.id, e.name, e.nameAcc )
                     );
                 }.bind(this));
+                
+            this.actions                
+                .forEach( function( e ){
+                    actionsTable.tBodies[0].appendChild(
+                        utils.createTableRow( e.id, e.name )
+                    );
+                }.bind(this));
             
             this.outcomes.forEach( function( outcome ){
                 var conditions = [];
@@ -152,6 +159,8 @@ var Game = function(){
             
             page.appendChild( utils.createHeading( "Items" ) );
             page.appendChild( itemsTable );
+            page.appendChild( utils.createHeading( "Actions" ) );
+            page.appendChild( actionsTable );
             page.appendChild( utils.createHeading( "Headings" ) );
             page.appendChild( headingsTable );
             page.appendChild( utils.createHeading( "Prologs" ) );
