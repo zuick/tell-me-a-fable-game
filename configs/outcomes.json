@@ -1,89 +1,829 @@
 [
     {
-        "type": "removeLastSubject",        
-        "condition": {            
-            "actionIds": [0],
-            "objectIds": [8]
-        }
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 4
     },
     {
-        "type": "removeLastSubject",        
-        "condition": {            
-            "actionIds": [0],
-            "objectIds": [7]
-        }
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "subjectId": 2,
+        "type": "newSubject"
     },
     {
-        "type": "nextEvent",
-        "eventId": 4,
         "condition": {
-            "actionIds": [2],
-            "objectIds": [7]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 8
     },
     {
-        "type": "nextEvent",
-        "eventId": 8,
         "condition": {
-            "actionIds": [2],
-            "objectIds": [8]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                18
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 3
     },
     {
-        "type": "nextEvent",
-        "eventId": 3,
         "condition": {
-            "actionIds": [2],
-            "objectIds": [9]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 18
     },
     {
-        "type": "nextEvent",
-        "eventId": 7,
         "condition": {
-            "actionIds": [0],
-            "objectIds": [7]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 23
     },
     {
-        "type": "nextEvent",
-        "eventId": 2,
         "condition": {
-            "actionIds": [0],
-            "objectIds": [8]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 15
     },
     {
-        "type": "nextEvent",
-        "eventId": 3,
         "condition": {
-            "actionIds": [0],
-            "objectIds": [9]
-        }
-    },
-        {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                22
+            ]
+        },
         "type": "nextEvent",
-        "eventId": 5,
-        "condition": {
-            "actionIds": [1],
-            "objectIds": [7]
-        }
+        "eventId": 36
     },
     {
-        "type": "nextEvent",
-        "eventId": 6,
         "condition": {
-            "actionIds": [1],
-            "objectIds": [8]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 41
     },
     {
-        "type": "nextEvent",
-        "eventId": 9,
         "condition": {
-            "actionIds": [1],
-            "objectIds": [9]
-        }
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 44
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 33
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 29
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 14
+    },
+    {
+        "condition": {
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 68
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 7
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 2
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "subjectId": 16,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                18
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 33
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                18
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 19
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 24
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 3
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 38
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 42
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 51
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 57
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 64
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 38
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 69
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 5
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 6
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                18
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 9
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 20
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 25
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 30
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 9
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 43
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 52
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 53
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 9
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 66
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "subjectId": 16,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                3
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 70
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                17
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 21
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                16
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 22
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                18
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 29
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                19
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 37
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 27
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                20
+            ]
+        },
+        "subjectId": 20,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                21
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 29
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                22
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 39
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                23
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 46
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                24
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 50
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 55
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                26
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 65
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                27
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 67
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "nextEvent",
+        "eventId": 71
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "subjectId": 20,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                4
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "type": "removeLastSubject"
     }
 ]
-
