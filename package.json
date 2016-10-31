@@ -1,0 +1,11 @@
+{
+  "name": "Tell me a fable",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "resizable": false,
+    "fullscreen": false,
+    "width": 640,
+    "height": 600
+  }
+}
