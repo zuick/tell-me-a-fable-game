@@ -8,25 +8,48 @@ var Game = function(){
     ];
     
     this.loadResources = function( onComplete ){
-        utils.loadResources( this.resources ).then(function( jsons ){
-            this.settings = jsons[0];
-            this.events = jsons[1];
-            this.items = jsons[2].map( function( item ){
+        if( typeof require === "function" && require("fs")){
+            var fs = require("fs");
+            
+            this.settings = JSON.parse( fs.readFileSync(this.resources[0], 'utf8') );
+            this.events = JSON.parse( fs.readFileSync(this.resources[1], 'utf8') );
+            this.items = JSON.parse( fs.readFileSync(this.resources[2], 'utf8') ).map( function( item ){
                 var splited = item.name.split(",");
                 var name = splited[0].trim();
                 var nameAcc = splited.length > 1 
                     ? splited[1].trim()
                     : name;
-                
+
                 item.name = name;
                 item.nameAcc = nameAcc;                
                 return item;
             });
-            this.actions = jsons[3];
-            this.outcomes = jsons[4];
+            this.actions = JSON.parse( fs.readFileSync(this.resources[3], 'utf8') );
+            this.outcomes = JSON.parse( fs.readFileSync(this.resources[4], 'utf8') );
+
+            if( typeof( onComplete ) === "function" ) onComplete();
             
-            if( typeof( onComplete ) === "function" ) onComplete();            
-        }.bind(this));
+        }else{
+            utils.loadResources( this.resources ).then(function( jsons ){
+                this.settings = jsons[0];
+                this.events = jsons[1];
+                this.items = jsons[2].map( function( item ){
+                    var splited = item.name.split(",");
+                    var name = splited[0].trim();
+                    var nameAcc = splited.length > 1 
+                        ? splited[1].trim()
+                        : name;
+
+                    item.name = name;
+                    item.nameAcc = nameAcc;                
+                    return item;
+                });
+                this.actions = jsons[3];
+                this.outcomes = jsons[4];
+
+                if( typeof( onComplete ) === "function" ) onComplete();            
+            }.bind(this));            
+        }
     }
     
     this.init = function(){        

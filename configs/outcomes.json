@@ -373,7 +373,8 @@
                 24
             ]
         },
-        "type": "removeLastSubject"
+        "subjectId": 2,
+        "type": "newSubject"
     },
     {
         "condition": {
@@ -455,6 +456,18 @@
             ]
         },
         "type": "removeLastSubject"
+    },
+    {
+        "condition": {
+            "actionIds": [
+                2
+            ],
+            "objectIds": [
+                28
+            ]
+        },
+        "subjectId": 20,
+        "type": "newSubject"
     },
     {
         "condition": {
@@ -1087,6 +1100,21 @@
                 28
             ]
         },
+        "subjectId": 3,
+        "type": "newSubject"
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                14
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                28
+            ]
+        },
         "type": "removeLastSubject"
     },
     {
@@ -1133,6 +1161,21 @@
         },
         "type": "nextEvent",
         "eventId": 119
+    },
+    {
+        "condition": {
+            "subjectIds": [
+                16
+            ],
+            "actionIds": [
+                1
+            ],
+            "objectIds": [
+                25
+            ]
+        },
+        "subjectId": 11,
+        "type": "newSubject"
     },
     {
         "condition": {
