@@ -443,7 +443,9 @@ var Game = function(){
         this.lastTurn = this.getPlayerTurn();
         this.applyOutcomes( this.lastTurn );
         this.addRow( "<b>" + this.getTurnString( this.lastTurn ) + "</b>");
-        this.popEvent();
+		this.popEvent();
+
+		window.scrollTo(0,document.body.scrollHeight);
     }
     
     this.getSpecialEvents = function( category ){
