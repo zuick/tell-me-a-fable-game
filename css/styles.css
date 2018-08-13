@@ -83,7 +83,7 @@ body {
 
 .radio-selectors .radio-option + label {
     background-color: rgba( 255, 255, 255, 0.3 );
-    padding: 5px;
+    padding: 8px;
     display: block;
     border: 1px solid rgba(115, 90, 51, 0.3);
     margin-bottom: -1px;
@@ -122,6 +122,30 @@ table td:first-child{
 
 table tr:nth-child(even){
     background: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and ( max-width: 1024px ){
+	.radio-selectors {
+		width: 100%;
+        word-break: break-word;
+    }
+    .radio-submit.inline {
+		float: none;
+    }
+    body{
+		margin: 0;
+		float: left;
+		font-size: 22px;
+    }
+    .page {
+		margin: 20px;
+		padding: 20px 40px;
+		max-width: none;
+	}
+	.btn.submit{
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
 }
 
 @media screen and ( max-width: 640px ){
