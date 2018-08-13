@@ -7,5 +7,8 @@
     "fullscreen": false,
     "width": 640,
     "height": 600
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
