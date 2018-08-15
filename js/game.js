@@ -445,7 +445,7 @@ var Game = function(){
         this.addRow( "<b>" + this.getTurnString( this.lastTurn ) + "</b>");
 		this.popEvent();
 
-		utils.scrollIt(500000, 500, 'easeOutQuad');
+		utils.scrollIt(500000, 1200, 'easeOutQuad');
     }
     
     this.getSpecialEvents = function( category ){
