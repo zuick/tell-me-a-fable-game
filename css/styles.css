@@ -157,6 +157,7 @@ table tr:nth-child(even){
         float: none;
     }
     body{
+		font-size: 12px;
         margin: 0;
     }
     .page {
