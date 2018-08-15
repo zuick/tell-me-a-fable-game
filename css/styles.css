@@ -157,10 +157,11 @@ table tr:nth-child(even){
         float: none;
     }
     body{
-		font-size: 12px;
-        margin: 0;
+		font-size: 15px;
+		margin: 0;
     }
     .page {
-        padding: 0 10px 20px 10px;
+		padding: 15px;
+		margin: 0;
     }
 }
