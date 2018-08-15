@@ -122,7 +122,9 @@ var Utils = function(){
             .join(". ");
 	}
 	
-	this.scrollIt = function(destination, duration = 200, easing = 'linear', callback) {
+	this.scrollIt = function(destination, duration, easing, callback) {
+		duration = duration || 200;
+		easing = easing || 'linear';
 
 		const easings = {
 		  linear(t) {
